@@ -11,11 +11,17 @@ Visual Studio Code 是我網頁開發的主要編輯器，好好打造編輯器�
 
 我的開發系統環境主要是 macOS，這裡提到的 Shortcuts，主要以 macOS 為主。
 
+---
+Visual Studio Code 環境相關：
+
+- [我的常用快捷鍵](https://github.com/twgd/myVSCode/blob/master/shortcuts.md)
+---
+
 ## MAC 初始設定
 
 在 Terminal 中使用 `code` 指令：
 
-- `Cmd ⌘ + Shift ⇧ + P` 開啟命令列
+- `Cmd + Shift + P` 開啟命令列
 - 輸入 `install` 關鍵字
 - 按下 `Shell Command: Install ‘code’ command in PATH`
 
@@ -29,7 +35,7 @@ Visual Studio Code 是我網頁開發的主要編輯器，好好打造編輯器�
 
   若習慣每個專案用 local 的 user 設定，這個套件非常方便設置與管理。
 
-- [gitflow](https://marketplace.visualstudio.com/items?itemName=vector-of-bool.gitflow)：
+- [gitflow](https://marketplace.visualstudio.com/items?itemName=vector-of-bool.gitflow)：
 
   讓你在專案中依循 git flow 快速在命令列創建 branch。
 
@@ -65,7 +71,7 @@ Visual Studio Code 是我網頁開發的主要編輯器，好好打造編輯器�
 
 - [Bookmarks](https://marketplace.visualstudio.com/items?itemName=alefragnani.Bookmarks):
 
-  在追蹤程式碼時，標記 tag，方便回頭快速找到標記的位置。
+  在追蹤程式碼時，標記 tag，方便回頭快速找到標記的位置。
 
 ### 維護程式碼品質
 
@@ -145,7 +151,7 @@ Visual Studio Code 是我網頁開發的主要編輯器，好好打造編輯器�
 
 設定檔案與路徑：`{{projectRoot}}/.vscode/settings.json`
 
-通常跟 Prettier 有關的設定 ，我會依專案來配置，才不會影響到舊專案原先的設定。
+通常跟 Prettier 有關的設定，我會依專案來配置，才不會影響到舊專案原先的設定。
 
 ```json
 {

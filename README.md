@@ -39,7 +39,7 @@ Visual Studio Code 環境相關：
 
   讓你在專案中依循 git flow 快速在命令列創建 branch。
 
-- [Git History](https://marketplace.visualstudio.com/items?itemName=donjayamanne.githistory)：
+- [Git Graph](https://marketplace.visualstudio.com/items?itemName=mhutchie.git-graph)：
 
   可以直接在 Visual Studio Code 中看 Git 歷史及線圖。
 

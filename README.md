@@ -43,7 +43,15 @@ Visual Studio Code 環境相關：
 
   可以直接在 Visual Studio Code 中看 Git 歷史及線圖。
 
+- [Gitlens](https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens)：
+
+  在 Visual Studio Code 中看某一行過去的修改內容以及是誰修改的等等。
+
 ### 增進開發效率
+
+- [Vim](https://marketplace.visualstudio.com/items?itemName=vscodevim.vim)：
+
+  可以在 Visual Studio Code 中使用 Vim 快捷，達到少用滑鼠的目的。（目前嘗試中）
 
 - [Project Manager](https://marketplace.visualstudio.com/items?itemName=alefragnani.project-manager)：
 
@@ -194,3 +202,4 @@ Visual Studio Code 環境相關：
 
 - [偏好的 Visual Studio Code 設定檔 - POY CHANG](https://poychang.github.io/my-vscode-config/)
 - [2018 VS Code 設定大補帖與小技巧 - Ryan Hsu](https://medium.com/@mvpdw06/2018-vs-code-設定大補帖與小技巧-24c6269b0cc1)
+- [VSCode 如何提高我的寫扣效率 - Larry Lu](https://larrylu.blog/vscode-tips-fe3320f9032a)

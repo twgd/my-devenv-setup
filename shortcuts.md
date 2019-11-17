@@ -23,6 +23,8 @@
 - 自動排版這個文件：`Shift + Alt + F`
 - 自動排版選取的部分：`Cmd + K` 後按 `Cmd + F`
 
+### Vim
+
 ## 官方文件
 
 - [Visual Studio Code Tips and Tricks](https://github.com/Microsoft/vscode-docs/blob/master/docs/getstarted/tips-and-tricks.md)
@@ -34,3 +36,4 @@
 ## 其他參考資料來源
 
 - [Refactoring with Visual Studio Code](https://johnpapa.net/refactoring-with-visual-studio-code/)
+- [What are the most-used vim commands/keypresses?](https://stackoverflow.com/questions/5400806/what-are-the-most-used-vim-commands-keypresses)

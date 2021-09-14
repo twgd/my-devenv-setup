@@ -4,17 +4,19 @@ Visual Studio Code 是我網頁開發的主要編輯器，好好打造編輯器�
 這個 repo 整理了一些我個人喜好安裝的 Extensions、偏好設定、常用的 Shortcuts，
 若未來需要重新配置環境的時候，可以作為參考依據，也可以在跟人聊到喜好配置的時候，方便與他人分享。
 
-雖然有套件可以做到同步 Visual Studio Code 的配置（[Sync Setting](https://marketplace.visualstudio.com/items?itemName=Shan.code-settings-sync)），
-但我還是喜歡在需要重新配置環境時，參考一下這份自己整理的 repo，可以重新檢視目前使用的套件跟設定是否還是有必要。
+Visual Studio Code 已內建支援可以登入 GitHub 帳號來同步配置，詳細請見官方文件 [Settings Sync](https://code.visualstudio.com/docs/editor/settings-sync)。
+雖然如此，我還是會在需要重新配置環境時，參考一下這份自己整理的 repo，可以重新檢視目前使用的套件跟設定是否還是有必要。
 
 這份清單會隨著我個人的開發歷程持續調整，若看到這份清單的人，有什麼想法跟建議，也歡迎跟我分享。
 
 我的開發系統環境主要是 macOS，這裡提到的 Shortcuts，主要以 macOS 為主。
 
 ---
+
 Visual Studio Code 環境相關：
 
 - [我的常用快捷鍵](https://github.com/twgd/myVSCode/blob/master/shortcuts.md)
+
 ---
 
 ## MAC 初始設定
@@ -35,10 +37,6 @@ Visual Studio Code 環境相關：
 
   若習慣每個專案用 local 的 user 設定，這個套件非常方便設置與管理。
 
-- [gitflow](https://marketplace.visualstudio.com/items?itemName=vector-of-bool.gitflow)：
-
-  讓你在專案中依循 git flow 快速在命令列創建 branch。
-
 - [Git Graph](https://marketplace.visualstudio.com/items?itemName=mhutchie.git-graph)：
 
   可以直接在 Visual Studio Code 中看 Git 歷史及線圖。
@@ -47,45 +45,53 @@ Visual Studio Code 環境相關：
 
   在 Visual Studio Code 中看某一行過去的修改內容以及是誰修改的等等。
 
+- [Visual Studio Code Commitizen Support](https://marketplace.visualstudio.com/items?itemName=KnisterPeter.vscode-commitizen)：
+
+  自動產生 Conventional Commits 模板
+
 ### 增進開發效率
 
 - [Vim](https://marketplace.visualstudio.com/items?itemName=vscodevim.vim)：
 
   可以在 Visual Studio Code 中使用 Vim 快捷，達到少用滑鼠的目的。（目前嘗試中）
 
-- [Project Manager](https://marketplace.visualstudio.com/items?itemName=alefragnani.project-manager)：
-
-  當同時有許多專案在開發時，可以快速在 Visual Studio Code 中切換專案。
-
-- [Blueprint - New Files and Folders of Files from Templates](https://marketplace.visualstudio.com/items?itemName=teamchilla.blueprint)：
-
-  當專案需要重複創建一包新的檔案時，可以先設置好樣板，之後就可自動幫你創建。
-
 - [ES7 React/Redux/GraphQL/React-Native snippets](https://marketplace.visualstudio.com/items?itemName=dsznajder.es7-react-js-snippets)：
 
   如果是 React/Redux 開發者，這個套件已有創建好的 snippets，可以直接使用。
 
+- [Jest Snippets](https://marketplace.visualstudio.com/items?itemName=andys8.jest-snippets)
+
+  用 Jest 寫測試的話，這套 snippets 可以增加開發速度。
+
+- [Quokka.js](https://marketplace.visualstudio.com/items?itemName=WallabyJs.quokka-vscode)
+
+  可以即時在編輯器上顯示即時的執行結果，支援 JavaScript 和 TypeScript。
+
+- [Thunder Client](https://marketplace.visualstudio.com/items?itemName=rangav.vscode-thunder-client)
+
+  可以在 VSCode 內直接呼叫 REST api，不需要再另外使用 Postman。
+
 - [live server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer)：
 
-  直接幫你起好一個 server，前端切版時直接看到熱更新結果，非常方便。
-
-- [live sass compiler](https://marketplace.visualstudio.com/items?itemName=ritwickdey.live-sass)：
-
-  搭配 live server 一起用，直接幫你 compile SASS 成 CSS。
-
-- [cdnjs](https://marketplace.visualstudio.com/items?itemName=JakeWilson.vscode-cdnjs)：
-
-  在 Visual Studio Code 中快速引入 CDN，例如 jQuery。
+  直接幫你起好一個 server，前端切版時即時更新，非常方便。
 
 - [Bookmarks](https://marketplace.visualstudio.com/items?itemName=alefragnani.Bookmarks):
 
   在追蹤程式碼時，標記 tag，方便回頭快速找到標記的位置。
 
+- [Multiple Clipboards for VSCode](https://marketplace.visualstudio.com/items?itemName=slevesque.vscode-multiclip)
+
+  循環剪貼簿。
+
+- [Todo Tree](https://marketplace.visualstudio.com/items?itemName=Gruntfuggly.todo-tree)
+
+  幫助 highlight 有註解 TODO 的地方。
+
+- [Auto Rename Tag](https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-rename-tag)
+
+  修改 Html tag 時，自動成對同步，不需修改兩遍。
+
 ### 維護程式碼品質
-
-- [SCSS Refactoring](https://marketplace.visualstudio.com/items?itemName=lukazakrajsek.scss-refactoring)：
-
-  幫助快速重構 SCSS，例如提取變數。
 
 - [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)：
 
@@ -93,22 +99,17 @@ Visual Studio Code 環境相關：
 
 - [Prettier - Code formatter](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)：
 
-  自動排版，幫助維持程式碼一慣風格，增加可讀性及維護性。
-
-  但通常我不會在全域開啟儲存檔案時自動排版的功能，通常是手動輸入指令來自動排版：
-
-  - 自動排版這個文件：`shift + alt + F`
-  - 自動排版選取的部分：`cmd + K` 後按 `cmd + F`
-
-- [EditorConfig for VS Code](https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig)：
-
-  如果團隊多人開發，大家不一定使用相同的編輯器，EditorConfig 可以作為不同編輯器間的共同設定。
+  自動排版。
 
 ### 外觀
 
 - [Material Icon Theme](https://marketplace.visualstudio.com/items?itemName=PKief.material-icon-theme)：
 
   改變檔案的 icon，我覺得更漂亮，也更易辨別檔案類型。
+
+- [Cobalt2 Theme Official](https://marketplace.visualstudio.com/items?itemName=wesbos.theme-cobalt2)
+
+  我目前使用的 Theme。
 
 ### 其他
 
@@ -128,63 +129,7 @@ Visual Studio Code 環境相關：
 
 全域設定檔案：`settings.json`
 
-```json
-{
-  "window.zoomLevel": 0,
-  "editor.tabSize": 2,
-  "editor.formatOnSave": false,
-  "editor.renderWhitespace": "boundary",
-  "git-autoconfig.configList": [
-    {
-      "user.email": "user1@mail.com",
-      "user.name": "user1"
-    },
-    {
-      "user.email": "user2@mail.com",
-      "user.name": "user2"
-    }
-  ],
-  "workbench.iconTheme": "material-icon-theme",
-  "files.autoSave": "onWindowChange",
-  "files.defaultLanguage": "markdown",
-  "liveServer.settings.donotShowInfoMsg": true,
-  "workbench.startupEditor": "none",
-  "[javascript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  }
-}
-```
-
-## 個別專案常用配置
-
-設定檔案與路徑：`{{projectRoot}}/.vscode/settings.json`
-
-通常跟 Prettier 有關的設定，我會依專案來配置，才不會影響到舊專案原先的設定。
-
-```json
-{
-  "editor.formatOnSave": true,
-  "prettier.singleQuote": true,
-  "prettier.semi": true,
-  "prettier.printWidth": 120,
-  "prettier.trailingComma": "es5",
-  "prettier.tabWidth": 2
-}
-```
-
-### 說明：
-
-`formatOnSave` 儲存時自動 format
-
-`singleQuote` 使用單引號
-
-`semi` 是否加分號
-
-`printWidth` 行寬
-
-`trailingComma` 物件結尾是否逗號
-
-`tabWidth` 縮排空格
+請參考：[settings.json](https://github.com/twgd/myVSCode/blob/master/settings.json)
 
 ## 設定推薦安裝套件
 

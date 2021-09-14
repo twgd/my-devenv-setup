@@ -8,22 +8,34 @@
 
 ## 我的常用 Shortcuts（macOS）
 
-- 開啟命令列：`Cmd + Shift + P`
-- 開啟或關閉 Terminal：Cmd + `
-- 搜尋並開啟檔案：`Cmd + P`
-- 關閉當前檔案：`Cmd + W`
+| shortcuts | 描述 |
+|-----------|---------|
+|`Cmd + Shift + P`| 開啟命令列 |
+|`Cmd + P`| 搜尋並開啟檔案 |
+|ctrl + `|開啟或關閉|
+|`Cmd + W`|關閉當前檔案|
 
 ### Markdown
 
-- 在側邊欄開啟即時預覽 Markdown：`Cmd + K` 再按 `V`
-- 開新分頁預覽 Markdown：`Cmd + Shift + V`
+
+| shortcuts | 描述 |
+|-----------|---------|
+|`Cmd + K` 再按 `V`| 在側邊欄開啟即時預覽 Markdown |
+|`Cmd + Shift + V`|開新分頁預覽 Markdown|
 
 ### Format
 
-- 自動排版這個文件：`Shift + Alt + F`
-- 自動排版選取的部分：`Cmd + K` 後按 `Cmd + F`
+| shortcuts | 描述 |
+|-----------|---------|
+|`Shift + Alt + F`| 自動排版這個文件 |
+|`Cmd + K` 按 `Cmd + F`|自動排版選取的部分|
 
-### Vim
+
+### Vim Extension
+
+| shortcuts | 描述 |
+|-----------|---------|
+|`Cmd + Alt + V`| toggle vim mode |
 
 ## 官方文件
 
@@ -32,6 +44,8 @@
 - [windows 一覽表](https://code.visualstudio.com/shortcuts/keyboard-shortcuts-windows.pdf)
 
 - [macOS 一覽表](https://code.visualstudio.com/shortcuts/keyboard-shortcuts-macos.pdf)
+
+- [Vim for Visual Studio Code](https://github.com/VSCodeVim/Vim)
 
 ## 其他參考資料來源
 

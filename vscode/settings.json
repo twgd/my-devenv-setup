@@ -6,12 +6,8 @@
   "editor.renderWhitespace": "all",
   "git-autoconfig.configList": [
     {
-      "user.email": "user1@gmail.com",
-      "user.name": "user1"
-    },
-    {
-      "user.email": "user2@gmail.com",
-      "user.name": "user2"
+      "user.email": "twgd.huang@gmail.com",
+      "user.name": "twgd"
     }
   ],
   "workbench.iconTheme": "material-icon-theme",

@@ -79,23 +79,38 @@ ln -s ~/dotfiles/.zshrc  ~/.zshrc
 
 未來還可以寫一個 script，透過 crontabs 執行，達到自動同步的功能。
 
+## Homebrew
+
+- install [Homebrew](https://brew.sh/)
+
+可以先下載後面會用到的套件：
+
+```shell
+brew install \
+  wget \
+  htop \
+  git \
+  pnpm \
+```
+
 ## Setup Terminal
 
 參考：[超簡單！十分鐘打造漂亮又好用的 zsh command line 環境 ](https://medium.com/statementdog-engineering/prettify-your-zsh-command-line-prompt-3ca2acc967f)
 
-- Homebrew
 - iTerm2
   - 下載並配置 [color schemes](https://github.com/mbadolato/iTerm2-Color-Schemes)
   - 下載並配置 powerline font (icon)
 - Zsh (bash replacement) + Oh-My-Zsh (Zsh framework)
 - [powerlevel10k](https://github.com/romkatv/powerlevel10k) (zsh theme) & set up
 - htop
+- wget
 
 ## Dev Environments
 
 - Git
   - 配置 global config
 - nvm + yarn
+- pnpm
 - SSH key
   - 設置 Github SSH key，以 SSH 與 Github 連線
 - [commitzen](https://commitizen-tools.github.io/commitizen/)

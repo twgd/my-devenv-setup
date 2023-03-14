@@ -158,9 +158,9 @@
   "editor.snippetSuggestions": "top",
   "editor.inlineSuggest.enabled": true,
   "github.copilot.enable": {
-    "*": true,
-    "yaml": true,
+    "*": false,
+    "yaml": false,
     "plaintext": false,
-    "markdown": true
+    "markdown": false
   }
 }

@@ -155,7 +155,7 @@ Visual Studio Code 已內建支援可以登入 GitHub 帳號來同步配置，�
 
   在 Visual Studio Code 中看某一行過去的修改內容以及是誰修改的等等。
 
-- [Visual Studio Code Commitizen Support](https://marketplace.visualstudio.com/items?itemName=KnisterPeter.vscode-commitizen)：
+- [Conventional Commits](https://marketplace.visualstudio.com/items?itemName=vivaxy.vscode-conventional-commits)：
 
   自動產生 Conventional Commits 模板
 

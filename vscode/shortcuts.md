@@ -8,34 +8,34 @@
 
 ## 我的常用 Shortcuts（macOS）
 
-| shortcuts | 描述 |
-|-----------|---------|
-|`Cmd + Shift + P`| 開啟命令列 |
-|`Cmd + P`| 搜尋並開啟檔案 |
-|ctrl + `|開啟或關閉|
-|`Cmd + W`|關閉當前檔案|
+| shortcuts         | 描述                |
+| ----------------- | ------------------- |
+| `Cmd + Shift + P` | 開啟命令列          |
+| `Cmd + P`         | 搜尋並開啟檔案      |
+| ctrl + `          | 開啟或關閉          |
+| `Cmd + W`         | 關閉當前檔案        |
+| `Cmd + J`         | Toggle 下方工作面板 |
+| `Cmd + 1`         | 聚焦在視窗 1        |
 
 ### Markdown
 
-
-| shortcuts | 描述 |
-|-----------|---------|
-|`Cmd + K` 再按 `V`| 在側邊欄開啟即時預覽 Markdown |
-|`Cmd + Shift + V`|開新分頁預覽 Markdown|
+| shortcuts          | 描述                          |
+| ------------------ | ----------------------------- |
+| `Cmd + K` 再按 `V` | 在側邊欄開啟即時預覽 Markdown |
+| `Cmd + Shift + V`  | 開新分頁預覽 Markdown         |
 
 ### Format
 
-| shortcuts | 描述 |
-|-----------|---------|
-|`Shift + Alt + F`| 自動排版這個文件 |
-|`Cmd + K` 按 `Cmd + F`|自動排版選取的部分|
-
+| shortcuts              | 描述               |
+| ---------------------- | ------------------ |
+| `Shift + Alt + F`      | 自動排版這個文件   |
+| `Cmd + K` 按 `Cmd + F` | 自動排版選取的部分 |
 
 ### Vim Extension
 
-| shortcuts | 描述 |
-|-----------|---------|
-|`Cmd + Alt + V`| toggle vim mode |
+| shortcuts       | 描述            |
+| --------------- | --------------- |
+| `Cmd + Alt + V` | toggle vim mode |
 
 ## 官方文件
 

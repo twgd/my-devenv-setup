@@ -154,13 +154,12 @@
   "workbench.colorTheme": "Cobalt2",
   "editor.bracketPairColorization.enabled": true,
   "editor.minimap.enabled": false,
-  "breadcrumbs.enabled": false,
   "editor.snippetSuggestions": "top",
   "editor.inlineSuggest.enabled": true,
   "github.copilot.enable": {
-    "*": false,
+    "*": true,
     "yaml": false,
     "plaintext": false,
-    "markdown": false
+    "markdown": true
   }
 }

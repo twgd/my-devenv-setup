@@ -12,6 +12,7 @@
 
 - [ ] iCloud 備份
 - [ ] Google 備份
+- [ ] Dropbox 備份
 - [ ] 本機的 repos 同步到 Github
 - [ ] Brave browser 與手機同步
   - Extensions
@@ -41,25 +42,64 @@
   - 觸控板：Tap to Click
   - 日期與時間：顯示秒數
   - Time Machine
-- 辭典
+- 辭典設定
 
-## Browser Settings
+## Homebrew
 
-- 下載
-  - Brave (預設)
+- install [Homebrew](https://brew.sh/)
+
+接著用 Homebrew 下載後面會用到的套件：
+
+```shell
+brew install \
+  wget \
+  htop \
+  git \
+  pnpm \
+```
+
+## Install GUI Apps
+
+```shell
+brew install --cask <package>
+```
+
+- Dropbox
+- Zoom
+- Line
+- Discord
+- Telegram
+- SurfShark
+- BeFocused(not available in Homebrew)
+- RescueTime
+- Raycast
+- Browsers
+  - Brave
   - Chrome
   - Edge
   - Firefox
-  - Tor (私密瀏覽)
+  - Tor
+  - Arc Browser(YouTube, Spotify, Notion, Slack, Figma, Twitter, Gmail)
+- iTerm2
+- visual-studio-code
+- jetbrains-toolbox
+- termius
+- tailscale
+
+## Browser Settings
+
+- Brave 設為預設瀏覽器
 - 登入
   - Google
   - Github
-- 同步 Brave 的 bookmarks & tabs
+- 同步 Brave 的 bookmarks & tabs & extensions
 - 偏好設定
   - dark mode
 - Extensions
   - React dev tools
   - SurfShark (需登入)
+  - Wappalyzer - Technology profiler
+  - HTML5 Outliner
 
 ## Symlink DotFiles
 
@@ -79,20 +119,6 @@ ln -s ~/dotfiles/.zshrc  ~/.zshrc
 
 未來還可以寫一個 script，透過 crontabs 執行，達到自動同步的功能。
 
-## Homebrew
-
-- install [Homebrew](https://brew.sh/)
-
-可以先下載後面會用到的套件：
-
-```shell
-brew install \
-  wget \
-  htop \
-  git \
-  pnpm \
-```
-
 ## Setup Terminal
 
 參考：[超簡單！十分鐘打造漂亮又好用的 zsh command line 環境 ](https://medium.com/statementdog-engineering/prettify-your-zsh-command-line-prompt-3ca2acc967f)
@@ -102,19 +128,15 @@ brew install \
   - 下載並配置 powerline font (icon)
 - Zsh (bash replacement) + Oh-My-Zsh (Zsh framework)
 - [powerlevel10k](https://github.com/romkatv/powerlevel10k) (zsh theme) & set up
-- htop
-- wget
 
 ## Dev Environments
 
 - Git
   - 配置 global config
-- nvm + yarn
-- pnpm
+- nvm + pnpm (or yarn)
 - SSH key
   - 設置 Github SSH key，以 SSH 與 Github 連線
 - [commitzen](https://commitizen-tools.github.io/commitizen/)
-- Postman (需登入)
 
 ## Visual Studio Code
 
@@ -275,24 +297,9 @@ Visual Studio Code 已內建支援可以登入 GitHub 帳號來同步配置，�
 
 ## Others
 
-- 下載 JetBrains Toolbox 並登入帳號，安裝以下軟體：
+- 登入已下載的 JetBrains Toolbox 並登入帳號，安裝以下軟體：
   - WebStorm
   - IntelliJ Rust
-
-## Install Apps
-
-- Dropbox (login)
-- Spotify (login)
-- Zoom
-- Line (login)
-- Slack (login)
-- Discord (login)
-- Telegram (login)
-- SurfShark (login)
-- BeFocused
-- RescueTime (login)
-- Notion (login)
-- Figma (login)
 
 ---
 

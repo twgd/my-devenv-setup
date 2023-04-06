@@ -8,28 +8,35 @@
 
 ## 我的常用 Shortcuts（macOS）
 
-| shortcuts         | 描述                |
-| ----------------- | ------------------- |
-| `Cmd + Shift + P` | 開啟命令列          |
-| `Cmd + P`         | 搜尋並開啟檔案      |
-| ctrl + `          | 開啟或關閉          |
-| `Cmd + W`         | 關閉當前檔案        |
-| `Cmd + J`         | Toggle 下方工作面板 |
-| `Cmd + 1`         | 聚焦在視窗 1        |
+### 一般
 
-### Markdown
+| shortcuts       | 描述                                 |
+| --------------- | ------------------------------------ |
+| Cmd + Shift + P | 開啟命令列                           |
+| Cmd + P         | 搜尋並開啟檔案                       |
+| ctrl + `        | 開啟或關閉 terminal                  |
+| Cmd + W         | 關閉當前檔案                         |
+| Cmd + J         | Toggle 下方工作面板                  |
+| Cmd + 數字      | 聚焦在第幾個視窗                     |
+| ctrl + 數字     | 聚焦在第幾個開啟的檔案（由左至右數） |
 
-| shortcuts          | 描述                          |
-| ------------------ | ----------------------------- |
-| `Cmd + K` 再按 `V` | 在側邊欄開啟即時預覽 Markdown |
-| `Cmd + Shift + V`  | 開新分頁預覽 Markdown         |
+### 導覽
 
-### Format
+| shortcuts        | 描述     |
+| ---------------- | -------- |
+| ctrl + -         | 向前導覽 |
+| ctrl + shift + - | 向後導覽 |
 
-| shortcuts              | 描述               |
-| ---------------------- | ------------------ |
-| `Shift + Alt + F`      | 自動排版這個文件   |
-| `Cmd + K` 按 `Cmd + F` | 自動排版選取的部分 |
+### 編輯
+
+| shortcuts                           | 描述                   |
+| ----------------------------------- | ---------------------- |
+| Cmd + D                             | 多選取下一個一樣的字串 |
+| Cmd + Shift + L                     | 選取所有相同的字串     |
+| fn + F2                             | 重命名                 |
+| Cmd + /                             | 註解                   |
+| Cmd + I                             | 顯示提示               |
+| ctrl + shift + Cmd + <left>/<right> | 向外或向內擴充選取     |
 
 ### Vim Extension
 
@@ -40,8 +47,6 @@
 ## 官方文件
 
 - [Visual Studio Code Tips and Tricks](https://github.com/Microsoft/vscode-docs/blob/master/docs/getstarted/tips-and-tricks.md)
-
-- [windows 一覽表](https://code.visualstudio.com/shortcuts/keyboard-shortcuts-windows.pdf)
 
 - [macOS 一覽表](https://code.visualstudio.com/shortcuts/keyboard-shortcuts-macos.pdf)
 

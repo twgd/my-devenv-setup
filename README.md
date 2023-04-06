@@ -115,7 +115,7 @@ brew install --cask \
 
 ## Browser Settings
 
-1. Brave 設為預設瀏覽器
+1. Arc 設為預設瀏覽器
 2. 同步 bookmarks & tabs & extensions
 3. 登入 Google & GitHub
 4. 偏好設定：dark mode

@@ -1,0 +1,163 @@
+{
+  // "window.zoomLevel": 1,
+  "editor.tabSize": 2,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "editor.renderWhitespace": "all",
+  "git-autoconfig.configList": [
+    {
+      "user.email": "twgd.huang@gmail.com",
+      "user.name": "twgd"
+    }
+  ],
+  "workbench.iconTheme": "material-icon-theme",
+  "files.autoSave": "onFocusChange",
+  "files.defaultLanguage": "markdown",
+  "liveServer.settings.donotShowInfoMsg": true,
+  "workbench.startupEditor": "none",
+  "prettier.singleQuote": true,
+  "prettier.semi": false,
+  "prettier.printWidth": 120,
+  "prettier.trailingComma": "es5",
+  "prettier.tabWidth": 2,
+  "editor.lineNumbers": "relative",
+  "vim.useSystemClipboard": true,
+  "vim.easymotion": true,
+  "vim.foldfix": true,
+  "todo-tree.highlights.enabled": true,
+  "editor.fontFamily": "MesloLGS NF, 'Courier New', monospace",
+  "editor.fontSize": 17,
+  "editor.lineHeight": 25,
+  "editor.letterSpacing": 0.5,
+  "files.trimTrailingWhitespace": true,
+  "editor.fontWeight": "400",
+  "editor.cursorStyle": "line",
+  "editor.cursorWidth": 5,
+  "editor.cursorBlinking": "solid",
+  // Terminal Theme：Tomorrow Night (https://glitchbone.github.io/vscode-base16-term/#/tomorrow-night)
+  "workbench.colorCustomizations": {
+    // "terminal.background": "#3b3b3b",
+    "terminal.foreground": "#C5C8C6",
+    "terminalCursor.background": "#C5C8C6",
+    "terminalCursor.foreground": "#C5C8C6",
+    "terminal.ansiBlack": "#1D1F21",
+    "terminal.ansiBlue": "#81A2BE",
+    "terminal.ansiBrightBlack": "#969896",
+    "terminal.ansiBrightBlue": "#81A2BE",
+    "terminal.ansiBrightCyan": "#8ABEB7",
+    "terminal.ansiBrightGreen": "#B5BD68",
+    "terminal.ansiBrightMagenta": "#B294BB",
+    "terminal.ansiBrightRed": "#CC6666",
+    "terminal.ansiBrightWhite": "#FFFFFF",
+    "terminal.ansiBrightYellow": "#F0C674",
+    "terminal.ansiCyan": "#8ABEB7",
+    "terminal.ansiGreen": "#B5BD68",
+    "terminal.ansiMagenta": "#B294BB",
+    "terminal.ansiRed": "#CC6666",
+    "terminal.ansiWhite": "#C5C8C6",
+    "terminal.ansiYellow": "#F0C674"
+  },
+  "vim.normalModeKeyBindings": [],
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      // 行首
+      "before": ["z", "h"],
+      "after": ["^"]
+    },
+    // 行尾
+    {
+      "before": ["z", "l"],
+      "after": ["$"]
+    },
+    // easymotion 找任何字母
+    {
+      "before": [" "],
+      "after": ["leader", "leader", "s"]
+    },
+    // easymotion 找任何字首
+    {
+      "before": ["leader", " "],
+      "after": ["leader", "leader", "leader", "b", "d", "w"]
+    },
+    // 修改整個單字
+    {
+      "before": ["z", "c"],
+      "after": ["c", "i", "w"]
+    },
+    // 修改 `` 內
+    {
+      "before": ["`", "c"],
+      "after": ["c", "i", "`"]
+    },
+    // 修改 '' 內
+    {
+      "before": ["'", "c"],
+      "after": ["c", "i", "'"]
+    },
+    // 修改 "" 內
+    {
+      "before": ["\"", "c"],
+      "after": ["c", "i", "\""]
+    },
+    // 選取 () 內
+    {
+      "before": ["z", ")"],
+      "after": ["v", "i", ")"]
+    },
+    // 選取 {} 內
+    {
+      "before": ["z", "}"],
+      "after": ["v", "i", "}"]
+    },
+    // 選取 `` 內
+    {
+      "before": ["z", "`"],
+      "after": ["v", "i", "`"]
+    },
+    // 選取 '' 內
+    {
+      "before": ["z", "'"],
+      "after": ["v", "i", "'"]
+    },
+    // 選取 "" 內
+    {
+      "before": ["z", "\""],
+      "after": ["v", "i", "\""]
+    },
+    // 選取 <> 內
+    {
+      "before": ["z", ">"],
+      "after": ["v", "i", ">"]
+    },
+    // 選取 <tag></tag> 內
+    {
+      "before": ["z", "t"],
+      "after": ["v", "i", "t"]
+    },
+    // 貼上最近一次 y 複製的內容
+    {
+      "before": [",", "p"],
+      "after": ["\"", "0", "p"]
+    }
+  ],
+  "vim.insertModeKeyBindings": [
+    // 離開 insert 模式
+    {
+      "before": ["j", "j"],
+      "after": ["<Esc>"]
+    }
+  ],
+  "cSpell.userWords": ["Chakra", "Hexo", "nextjs", "tailwindcss", "thetwgd", "TWGD", "Vercel"],
+  "git.autofetch": true,
+  "workbench.colorTheme": "Cobalt2",
+  "editor.bracketPairColorization.enabled": true,
+  "editor.snippetSuggestions": "top",
+  "editor.inlineSuggest.enabled": true,
+  "github.copilot.enable": {
+    "*": true,
+    "yaml": false,
+    "plaintext": false,
+    "markdown": true
+  },
+  "editor.linkedEditing": true
+}

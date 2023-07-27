@@ -13,12 +13,15 @@
   "workbench.iconTheme": "material-icon-theme",
   "files.autoSave": "onFocusChange",
   "files.defaultLanguage": "markdown",
+  "files.associations": {
+    "*.css": "tailwindcss"
+  },
   "liveServer.settings.donotShowInfoMsg": true,
   "workbench.startupEditor": "none",
   "prettier.singleQuote": true,
   "prettier.semi": false,
-  "prettier.printWidth": 120,
-  "prettier.trailingComma": "es5",
+  "prettier.printWidth": 100,
+  "prettier.trailingComma": "all",
   "prettier.tabWidth": 2,
   "editor.lineNumbers": "relative",
   "vim.useSystemClipboard": true,
@@ -147,7 +150,17 @@
       "after": ["<Esc>"]
     }
   ],
-  "cSpell.userWords": ["Chakra", "Hexo", "nextjs", "tailwindcss", "thetwgd", "TWGD", "Vercel"],
+  "cSpell.userWords": [
+    "Chakra",
+    "clsx",
+    "contentlayer",
+    "Hexo",
+    "nextjs",
+    "tailwindcss",
+    "thetwgd",
+    "TWGD",
+    "Vercel"
+  ],
   "git.autofetch": true,
   "workbench.colorTheme": "Cobalt2",
   "editor.bracketPairColorization.enabled": true,
@@ -159,5 +172,9 @@
     "plaintext": false,
     "markdown": true
   },
-  "editor.linkedEditing": true
+  "editor.linkedEditing": true,
+  "tailwindCSS.experimental.classRegex": [["clsx\\(([^)]*)\\)", "(?:'|\"|`)([^']*)(?:'|\"|`)"]],
+  "editor.quickSuggestions": {
+    "strings": true
+  }
 }

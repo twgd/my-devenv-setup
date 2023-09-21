@@ -112,4 +112,6 @@ export NVM_DIR="$HOME/.nvm"
 
 # Homebrew
 export HOMEBREW_NO_ANALYTICS=1
-export HOMEBREW_NO_GOOGLE_ANALYTICS=1
+# HOMEBREW_NO_GOOGLE_ANALYTICS is now a no-op so can be unset.
+# All Homebrew Google Analytics code and data was destroyed.
+# export HOMEBREW_NO_GOOGLE_ANALYTICS=1

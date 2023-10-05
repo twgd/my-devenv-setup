@@ -220,6 +220,10 @@ Visual Studio Code 已內建支援可以登入 GitHub 帳號來同步配置，�
 
   可以在 Visual Studio Code 中使用 Vim 快捷，達到少用滑鼠的目的。我的 vim 快捷鍵設定請見：[settings.json](https://github.com/twgd/my-devenv-setup/blob/master/vscode/settings.json)
 
+- [Codeium: AI Coding Autocomplete and Chat for Python, Javascript, Typescript, Java, Go, and more](https://marketplace.visualstudio.com/items?itemName=Codeium.codeium)
+
+  生成式 AI 寫程式幫手，支援自動補齊程式碼、語意化搜尋專案程式碼、對話功能。可作為 GitHub Copilot 的免費替代方案。可整合在 IDE 中。
+
 - [ES7 React/Redux/GraphQL/React-Native snippets](https://marketplace.visualstudio.com/items?itemName=dsznajder.es7-react-js-snippets)：
 
   如果是 React/Redux 開發者，這個套件已有創建好的 snippets，可以直接使用。

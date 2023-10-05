@@ -13,6 +13,9 @@
   "workbench.iconTheme": "material-icon-theme",
   "files.autoSave": "onFocusChange",
   "files.defaultLanguage": "markdown",
+  "files.associations": {
+    "*.css": "tailwindcss"
+  },
   "liveServer.settings.donotShowInfoMsg": true,
   "workbench.startupEditor": "none",
   "prettier.singleQuote": true,
@@ -158,5 +161,10 @@
     "yaml": false,
     "plaintext": false,
     "markdown": true
-  }
+  },
+  "editor.linkedEditing": true,
+  "editor.quickSuggestions": {
+    "strings": "on"
+  },
+  "tailwindCSS.experimental.classRegex": [["clsx\\(([^)]*)\\)", "(?:'|\"|`)([^']*)(?:'|\"|`)"]]
 }

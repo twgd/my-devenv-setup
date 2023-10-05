@@ -84,6 +84,7 @@ brew install --cask \
   google-chrome \
   microsoft-edge \
   firefox \
+  Vivaldi \
   tor-browser \
   arc \
   iterm2 \
@@ -105,6 +106,7 @@ brew install --cask \
   - Chrome
   - Edge
   - Firefox
+  - Vivaldi
   - Tor
   - Arc Browser (YouTube, Spotify, Notion, Slack, Figma, Twitter, Gmail)
 - iTerm2
@@ -247,10 +249,6 @@ Visual Studio Code 已內建支援可以登入 GitHub 帳號來同步配置，�
 - [Todo Tree](https://marketplace.visualstudio.com/items?itemName=Gruntfuggly.todo-tree)
 
   幫助 highlight 有註解 TODO 的地方。
-
-- [Auto Rename Tag](https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-rename-tag)
-
-  修改 Html tag 時，自動成對同步，不需修改兩遍。
 
 - [Tailwind CSS IntelliSense](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss)
 

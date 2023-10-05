@@ -308,11 +308,11 @@ Visual Studio Code 已內建支援可以登入 GitHub 帳號來同步配置，�
 
 - [Polacode](https://marketplace.visualstudio.com/items?itemName=pnp.polacode)
 
-### 全域配置設定及快捷鍵
+### 自訂配置設定檔案
 
-- 全域設定檔案：[settings.json](https://github.com/twgd/my-devenv-setup/blob/master/vscode/settings.json)
+- 自訂配置設定：[settings.json](https://github.com/twgd/my-devenv-setup/blob/master/vscode/settings.json)
 
-- [我的常用快捷鍵](https://github.com/twgd/my-devenv-setup/blob/master/vscode/shortcuts.md)
+- 自訂快捷設定：[keybindings.json](https://github.com/twgd/my-devenv-setup/blob/master/vscode/keybindings.json)
 
 ### 設定推薦安裝套件
 
@@ -334,12 +334,3 @@ Visual Studio Code 已內建支援可以登入 GitHub 帳號來同步配置，�
 
 - 下載 Line
 - 下載 BeFocused
-
----
-
-參考資料來源：
-
-- [Mac Setup for Web Development [2022]](https://www.robinwieruch.de/mac-setup-web-development/)
-- [偏好的 Visual Studio Code 設定檔 - POY CHANG](https://poychang.github.io/my-vscode-config/)
-- [2018 VS Code 設定大補帖與小技巧 - Ryan Hsu](https://medium.com/@mvpdw06/2018-vs-code-設定大補帖與小技巧-24c6269b0cc1)
-- [VSCode 如何提高我的寫扣效率 - Larry Lu](https://larrylu.blog/vscode-tips-fe3320f9032a)

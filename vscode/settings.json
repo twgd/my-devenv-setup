@@ -169,6 +169,7 @@
   "tailwindCSS.experimental.classRegex": [["clsx\\(([^)]*)\\)", "(?:'|\"|`)([^']*)(?:'|\"|`)"]],
   "codeium.enableConfig": {
     "*": true,
-    "xml": true
+    "xml": true,
+    "markdown": true
   }
 }

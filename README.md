@@ -67,6 +67,7 @@ brew install \
   htop \
   git \
   zsh \
+  oven-sh/bun/bun \
 ```
 
 3. 使用 Homebrew 下載 GUI Apps (casks)
@@ -167,7 +168,10 @@ ln -s ~/dotfiles/.zshrc  ~/.zshrc
 
 2. 下載 nvm 並配置：到 [nvm](https://github.com/nvm-sh/nvm) 下載安裝（Homebrew 不支援下載），並確認 `~/.zshrc` 檔案的配置
 
-3. 使用 nvm 下載 node.js 後，下載 [pnpm](https://pnpm.io/installation) 及 yarn （開發套件管理工具）
+3. 使用 nvm 下載 node.js 後，再根據專案需求下載 [pnpm](https://pnpm.io/installation) 或 [yarn](https://yarnpkg.com/getting-started/install)
+
+> The preferred way to manage Yarn is by-project and through Corepack, a tool shipped by default with Node.js.
+> Modern releases of Yarn aren't meant to be installed globally, or from npm.
 
 4. 設置 Github SSH key，以 SSH 與 Github 連線：參考 [Connecting to GitHub with SSH](https://docs.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh) 來設置
 

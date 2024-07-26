@@ -89,6 +89,7 @@ brew install --cask \
   tor-browser \
   arc \
   iterm2 \
+  git-credential-manager \
   visual-studio-code \
   jetbrains-toolbox \
   termius \

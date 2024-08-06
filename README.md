@@ -90,6 +90,7 @@ brew install --cask \
   arc \
   iterm2 \
   git-credential-manager \
+  cursor \
   visual-studio-code \
   jetbrains-toolbox \
   termius \

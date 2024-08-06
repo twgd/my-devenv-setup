@@ -1,5 +1,4 @@
 {
-  // "window.zoomLevel": 1,
   "editor.tabSize": 2,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.formatOnSave": true,
@@ -156,12 +155,6 @@
   "editor.bracketPairColorization.enabled": true,
   "editor.snippetSuggestions": "top",
   "editor.inlineSuggest.enabled": true,
-  "github.copilot.enable": {
-    "*": true,
-    "yaml": false,
-    "plaintext": false,
-    "markdown": true
-  },
   "editor.linkedEditing": true,
   "editor.quickSuggestions": {
     "strings": "on"

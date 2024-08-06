@@ -17,7 +17,8 @@
 - [ ] 本機的 repos 同步到 Github
 - [ ] 瀏覽器備份與同步
 - [ ] dot files 備份到 [my-devenv-setup/dotfiles](https://github.com/twgd/my-devenv-setup/tree/master/dotfiles)
-- [ ] VScode 以 Github 帳號同步備份 (settings.json 也另外備份到 [my-devenv-setup/vscode](https://github.com/twgd/my-devenv-setup/tree/master/vscode))
+- [ ] Cursor 備份 (settings.json & keybindings.json 備份到 [my-devenv-setup/cursor](https://github.com/twgd/my-devenv-setup/tree/master/cursor))
+- [ ] VScode 以 Github 帳號同步備份 (settings.json & keybindings.json 也另外備份到 [my-devenv-setup/vscode](https://github.com/twgd/my-devenv-setup/tree/master/vscode))
 - [ ] Raycast 匯出備份
 - [ ] Notion 備份：使用 [notion-backup](https://github.com/darobin/notion-backup) 及 Github Actions 自動化批次備份（每天一次）
 
@@ -92,7 +93,6 @@ brew install --cask \
   git-credential-manager \
   cursor \
   visual-studio-code \
-  jetbrains-toolbox \
   termius \
   tailscale
 ```
@@ -113,8 +113,8 @@ brew install --cask \
   - Tor
   - Arc Browser (YouTube, Spotify, Notion, Slack, Figma, Twitter, Gmail)
 - iTerm2
+- Cursor
 - Visual Studio Code
-- JetBrains Toolbox
 - Termius
 - Tailscale
 
@@ -177,9 +177,17 @@ ln -s ~/dotfiles/.zshrc  ~/.zshrc
 
 4. 設置 Github SSH key，以 SSH 與 Github 連線：參考 [Connecting to GitHub with SSH](https://docs.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh) 來設置
 
+## Cursor
+
+2024 年我開始使用 [Cursor](https://www.cursor.com/) 做為主要的編輯器。Cursor 專門打造來搭配 AI 輔助開發，以達到更好的開發效率。
+
+它基於 VSCode 的核心，與 VSCode 有極為相似的介面及功能，從 VSCode 轉移的門檻很低，可以快速匯入 extensions, keybindings 等個人化設定，即能上手開發。
+
+我在 Cursor 所使用的配置設定大致上與 VSCode 相似，可以參考下面的分享。
+
 ## Visual Studio Code
 
-Visual Studio Code 是我網頁開發的主要編輯器，好好打造編輯器的環境配置有助於提升開發效率，
+Visual Studio Code 是我使用的主要編輯器之一，好好打造編輯器的環境配置有助於提升開發效率。
 這裡整理了一些我安裝的 Extensions、偏好設定、常用的 Shortcuts，
 若未來需要重新配置環境的時候，可以作為參考依據，另外也方便與他人分享。
 
@@ -308,10 +316,6 @@ Visual Studio Code 已內建支援可以登入 GitHub 帳號來同步配置，�
 
   highlight `.env` 檔案。
 
-- [GitHub Copilot](https://marketplace.visualstudio.com/items?itemName=GitHub.copilot)
-
-- [GitHub Copilot Lab](https://marketplace.visualstudio.com/items?itemName=GitHub.copilot-labs)
-
 - [Polacode](https://marketplace.visualstudio.com/items?itemName=pnp.polacode)
 
 ### 自訂配置設定檔案
@@ -333,10 +337,6 @@ Visual Studio Code 已內建支援可以登入 GitHub 帳號來同步配置，�
 ```
 
 ## Others
-
-- 登入已下載的 JetBrains Toolbox 並登入帳號，安裝以下軟體：
-
-  - WebStorm
 
 - 下載 Line
 - 下載 BeFocused

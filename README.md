@@ -1,6 +1,6 @@
-# My MacBook Setup for Web Development
+# My Dev Env Setup
 
-受到 [這篇文章](https://www.robinwieruch.de/mac-setup-web-development/) 的啟發，決定在這裡記錄我作為網頁開發的筆電環境配置。
+受到 [這篇文章](https://www.robinwieruch.de/mac-setup-web-development/) 的啟發，決定在這裡記錄我的開發環境配置。
 
 從備份到逐步設定環境、下載所需的應用程式等等，依先後次序紀錄，列出所需的項目，供未來換機或設定新設備的時候對照。
 
@@ -16,13 +16,13 @@
 - [ ] Dropbox 備份
 - [ ] 本機的 repos 同步到 Github
 - [ ] 瀏覽器備份與同步
-- [ ] dot files 備份到 [my-devenv-setup/dotfiles](https://github.com/twgd/my-devenv-setup/tree/master/dotfiles)
+- [ ] dotfiles 備份到 [my-devenv-setup/dotfiles](https://github.com/twgd/my-devenv-setup/tree/master/dotfiles)
 - [ ] Cursor 備份 (settings.json & keybindings.json 備份到 [my-devenv-setup/cursor](https://github.com/twgd/my-devenv-setup/tree/master/cursor))
 - [ ] VScode 以 Github 帳號同步備份 (settings.json & keybindings.json 也另外備份到 [my-devenv-setup/vscode](https://github.com/twgd/my-devenv-setup/tree/master/vscode))
 - [ ] Raycast 匯出備份
 - [ ] Notion 備份：使用 [notion-backup](https://github.com/darobin/notion-backup) 及 Github Actions 自動化批次備份（每天一次）
 
-## OS Settings
+## macOS Settings
 
 - 登入 Apple ID / iCloud
 - 登入 Google 帳號 (行事曆)
@@ -56,7 +56,7 @@
   - 進階：顯示所有檔案副檔名 -> on
 - 辭典設定：中英文、日英文
 
-## Homebrew
+## Homebrew Setup
 
 1. 下載 [Homebrew](https://brew.sh/)
 
@@ -69,6 +69,8 @@ brew install \
   git \
   zsh \
   oven-sh/bun/bun \
+  neovim \
+  stow \
 ```
 
 3. 使用 Homebrew 下載 GUI Apps (casks)
@@ -89,6 +91,7 @@ brew install --cask \
   Vivaldi \
   tor-browser \
   arc \
+  wezterm \
   iterm2 \
   git-credential-manager \
   cursor \
@@ -112,13 +115,14 @@ brew install --cask \
   - Vivaldi
   - Tor
   - Arc Browser (YouTube, Spotify, Notion, Slack, Figma, Twitter, Gmail)
+- WezTerm
 - iTerm2
 - Cursor
 - Visual Studio Code
 - Termius
 - Tailscale
 
-## Browser Settings
+## Browser Setup
 
 1. Arc 設為預設瀏覽器
 2. 同步 bookmarks & tabs & extensions
@@ -127,36 +131,43 @@ brew install --cask \
 
 - Extensions
   - React dev tools
-  - SurfShark
+  - Vimium
   - Wappalyzer - Technology profiler
   - HTML5 Outliner
 
-## Symlink DotFiles
+## DotFiles Setup
 
-- 參考：[Dotfiles – What is a Dotfile and How to Create it in Mac and Linux](https://www.freecodecamp.org/news/dotfiles-what-is-a-dot-file-and-how-to-create-it-in-mac-and-linux/)
+- 參考：[How To Easily Manage Your Dotfiles With GNU Stow](https://www.josean.com/posts/how-to-manage-dotfiles-with-gnu-stow)
 
-1. 下載 repo: [my-devenv-setup](https://github.com/twgd/my-devenv-setup)
-2. 使用 `ln -s` 軟連結指令，將 repo 內的 dotFiles 連結到 `~/` 資料夾內的 dotFiles
+使用 GNU Stow 管理 dotfiles，方便利用 Git 做版本控制，達到統一管理並同步到 Github 的目的。並使用 Git 子模組來追蹤 kickstart.nvim 的 fork，確保可以輕鬆同步 kickstart.nvim 的更新，並與 dotfiles 儲存庫保持一致。
+
+1. 下載 dotfiles 儲存庫到本地: [my-devenv-setup](https://github.com/twgd/my-devenv-setup)
 
 ```shell
-ln -s ~/dotfiles/.zshrc  ~/.zshrc
+git clone --recurse-submodules git@github.com:twgd/my-devenv-setup.git
 ```
 
-將 `~/dotfiles/` 資料夾內的 dotFiles 與 `~/` 資料夾內的 dotFiles 設置軟連結的目的是：
+- `--recurse-submodules` 確保子模組（kickstart.nvim）一併被 clone。
 
-當我們修改 `~/` 內的 dotFiles 時，會同步更新所連結的 `~/dotfiles/` 內的檔案，這樣我們可以透過將 `~/dotfiles/` 利用 Git 做版本控制，達到統一管理並同步 dotFiles 到 Github 的目的。
+2. 確認 stow 已安裝完成，並到 `./dotfiles/` 資料夾內使用 stow 建立軟連結（`./dotfiles/` 資料夾內的結構與 `~/` 資料夾內的結構相同）
 
-未來還可以寫一個 script，透過 crontabs 執行，達到自動同步的功能。
+```shell
+stow -t ~ .
+```
 
-## Raycast Settings
+P.S. `./cursor/` 及 `./vscode/` 資料夾內的配置設定檔案，因為路徑不在 `~/` 資料夾內，所以要另外手動進行軟連結。
+
+## Raycast Setup
 
 - 匯入 Raycast 偏好設定備份
 
-## Setup Terminal
+## Terminal Setup
 
-- 參考：[超簡單！十分鐘打造漂亮又好用的 zsh command line 環境 ](https://medium.com/statementdog-engineering/prettify-your-zsh-command-line-prompt-3ca2acc967f)
+我目前正轉向使用 WezTerm 作為 Terminal
 
-1. 配置 iTerm2 的 Color Presets：下載並匯入 [color schemes](https://github.com/mbadolato/iTerm2-Color-Schemes)，選擇 Tomorrow Night Eighties 作為 iTerm2 的 Color Presets
+- 參考：[How To Create An Amazing Terminal Setup With Wezterm](https://www.josean.com/posts/how-to-setup-wezterm-terminal)
+
+1. 確認 WezTerm 已安裝完成，並載入 `~/.wezterm.lua` 設定檔
 
 2. 配置 Zsh (bash replacement) 為預設 shell：確認 Zsh 已下載安裝完成，並將 Zsh 設為預設 shell
 
@@ -164,7 +175,22 @@ ln -s ~/dotfiles/.zshrc  ~/.zshrc
 
 4. 安裝 powerlevel10k (zsh theme)：到 [powerlevel10k](https://github.com/romkatv/powerlevel10k) 下載安裝並配置。用 iTerm2 運行 `p10k configure` 會自動下載推薦的 Nerd Font (支援特殊 icon 的字型)
 
-## Dev Environments
+5. 使用 Oh-My-Zsh 安裝以下 plugin，並確認更新 `~/.zshrc` 配置:
+
+- [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions)
+- [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting)
+
+---
+
+iTerm2 的安裝：
+
+- 參考：[超簡單！十分鐘打造漂亮又好用的 zsh command line 環境 ](https://medium.com/statementdog-engineering/prettify-your-zsh-command-line-prompt-3ca2acc967f)
+
+配置 iTerm2 的 Color Presets：下載並匯入 [color schemes](https://github.com/mbadolato/iTerm2-Color-Schemes)，選擇 Tomorrow Night Eighties 作為 iTerm2 的 Color Presets
+
+---
+
+## Dev Environments Setup
 
 1. 確認 Git 已下載，並確認 global config 檔案也配置完畢
 
@@ -177,7 +203,17 @@ ln -s ~/dotfiles/.zshrc  ~/.zshrc
 
 4. 設置 Github SSH key，以 SSH 與 Github 連線：參考 [Connecting to GitHub with SSH](https://docs.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh) 來設置
 
-## Cursor
+## Neovim Setup
+
+目前正在嘗試使用 Neovim 搭配 Claude Code 開發。
+
+1. 確認已下載 neovim
+
+2. 確認載入配置 `~/.config/nvim`
+
+我使用 `kickstart.vim` 開始配置，我的設定檔同步更新在這個 [fork repo](https://github.com/twgd/kickstart.nvim)
+
+## Cursor Setup
 
 2024 年我開始使用 [Cursor](https://www.cursor.com/) 做為主要的編輯器。Cursor 專門打造來搭配 AI 輔助開發，以達到更好的開發效率。
 

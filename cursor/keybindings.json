@@ -7,5 +7,9 @@
   {
     "key": "shift+cmd+a",
     "command": "git.push"
+  },
+  {
+    "key": "cmd+i",
+    "command": "composerMode.agent"
   }
 ]

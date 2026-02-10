@@ -17,7 +17,6 @@
 - [ ] 本機的 repos 同步到 Github
 - [ ] 瀏覽器備份與同步
 - [ ] dotfiles 備份到 [my-devenv-setup/dotfiles](https://github.com/twgd/my-devenv-setup/tree/master/dotfiles)
-- [ ] Cursor 備份 (settings.json & keybindings.json 備份到 [my-devenv-setup/cursor](https://github.com/twgd/my-devenv-setup/tree/master/cursor))
 - [ ] VScode 以 Github 帳號同步備份 (settings.json & keybindings.json 也另外備份到 [my-devenv-setup/vscode](https://github.com/twgd/my-devenv-setup/tree/master/vscode))
 - [ ] Raycast 匯出備份
 - [ ] Notion 備份：使用 [notion-backup](https://github.com/darobin/notion-backup) 及 Github Actions 自動化批次備份（每天一次）
@@ -70,6 +69,7 @@ brew install \
   zsh \
   oven-sh/bun/bun \
   neovim \
+  lazygit \
   stow \
 ```
 
@@ -77,50 +77,22 @@ brew install \
 
 ```shell
 brew install --cask \
-  dropbox \
-  zoom \
-  discord \
-  telegram \
-  surfshark \
-  rescuetime \
-  raycast \
   brave-browser \
+  claude-code \
+  discord \
+  dropbox \
+  git-credential-manager \
   google-chrome \
   microsoft-edge \
-  firefox \
-  Vivaldi \
-  tor-browser \
-  arc \
+  raycast \
   wezterm \
+  arc \
+  firefox \
   iterm2 \
-  git-credential-manager \
-  cursor \
+  rescuetime \
+  telegram \
   visual-studio-code \
-  termius \
-  tailscale
 ```
-
-- Dropbox
-- Zoom
-- Discord
-- Telegram
-- SurfShark
-- RescueTime
-- Raycast
-- Browsers
-  - Brave
-  - Chrome
-  - Edge
-  - Firefox
-  - Vivaldi
-  - Tor
-  - Arc Browser (YouTube, Spotify, Notion, Slack, Figma, Twitter, Gmail)
-- WezTerm
-- iTerm2
-- Cursor
-- Visual Studio Code
-- Termius
-- Tailscale
 
 ## Browser Setup
 
@@ -155,7 +127,7 @@ git clone --recurse-submodules git@github.com:twgd/my-devenv-setup.git
 stow -t ~ .
 ```
 
-P.S. `./cursor/` 及 `./vscode/` 資料夾內的配置設定檔案，因為路徑不在 `~/` 資料夾內，所以要另外手動進行軟連結。
+P.S. `./vscode/` 資料夾內的配置設定檔案，因為路徑不在 `~/` 資料夾內，所以要另外手動進行軟連結。
 
 ## Raycast Setup
 
@@ -163,7 +135,7 @@ P.S. `./cursor/` 及 `./vscode/` 資料夾內的配置設定檔案，因為路�
 
 ## Terminal Setup
 
-我目前正轉向使用 WezTerm 作為 Terminal
+我目前主要使用 WezTerm
 
 - 參考：[How To Create An Amazing Terminal Setup With Wezterm](https://www.josean.com/posts/how-to-setup-wezterm-terminal)
 
@@ -182,7 +154,7 @@ P.S. `./cursor/` 及 `./vscode/` 資料夾內的配置設定檔案，因為路�
 
 ---
 
-iTerm2 的安裝：
+過去習慣的 iTerm2 作為備用：
 
 - 參考：[超簡單！十分鐘打造漂亮又好用的 zsh command line 環境 ](https://medium.com/statementdog-engineering/prettify-your-zsh-command-line-prompt-3ca2acc967f)
 
@@ -205,21 +177,13 @@ iTerm2 的安裝：
 
 ## Neovim Setup
 
-目前正在嘗試使用 Neovim 搭配 Claude Code 開發。
+目前使用 Neovim 搭配 Claude Code 開發。
 
 1. 確認已下載 neovim
 
 2. 確認載入配置 `~/.config/nvim`
 
 我使用 `kickstart.vim` 開始配置，我的設定檔同步更新在這個 [fork repo](https://github.com/twgd/kickstart.nvim)
-
-## Cursor Setup
-
-2024 年我開始使用 [Cursor](https://www.cursor.com/) 做為主要的編輯器。Cursor 專門打造來搭配 AI 輔助開發，以達到更好的開發效率。
-
-它基於 VSCode 的核心，與 VSCode 有極為相似的介面及功能，從 VSCode 轉移的門檻很低，可以快速匯入 extensions, keybindings 等個人化設定，即能上手開發。
-
-我在 Cursor 所使用的配置設定大致上與 VSCode 相似，可以參考下面的分享。
 
 ## Visual Studio Code
 
@@ -270,31 +234,15 @@ Visual Studio Code 已內建支援可以登入 GitHub 帳號來同步配置，�
 
   可以在 Visual Studio Code 中使用 Vim 快捷，達到少用滑鼠的目的。我的 vim 快捷鍵設定請見：[settings.json](https://github.com/twgd/my-devenv-setup/blob/master/vscode/settings.json)
 
-- [Codeium: AI Coding Autocomplete and Chat for Python, Javascript, Typescript, Java, Go, and more](https://marketplace.visualstudio.com/items?itemName=Codeium.codeium)
-
-  生成式 AI 寫程式幫手，支援自動補齊程式碼、語意化搜尋專案程式碼、對話功能。可作為 GitHub Copilot 的免費替代方案。可整合在 IDE 中。
+- [Claude Code for VS Code](https://marketplace.visualstudio.com/items?itemName=anthropic.claude-code)
 
 - [ES7 React/Redux/GraphQL/React-Native snippets](https://marketplace.visualstudio.com/items?itemName=dsznajder.es7-react-js-snippets)：
 
   如果是 React/Redux 開發者，這個套件已有創建好的 snippets，可以直接使用。
 
-- [Jest](https://marketplace.visualstudio.com/items?itemName=Orta.vscode-jest)
-
-- [Jest Snippets](https://marketplace.visualstudio.com/items?itemName=andys8.jest-snippets)
-
-  用 Jest 寫測試的話，這套 snippets 可以增加開發速度。
-
 - [Quokka.js](https://marketplace.visualstudio.com/items?itemName=WallabyJs.quokka-vscode)
 
   可以即時在編輯器上顯示即時的執行結果，支援 JavaScript 和 TypeScript。
-
-- [Thunder Client](https://marketplace.visualstudio.com/items?itemName=rangav.vscode-thunder-client)
-
-  可以在 VSCode 內直接呼叫 REST api，不需要再另外使用 Postman。
-
-- [live server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer)：
-
-  直接幫你起好一個 server，前端切版時即時更新，非常方便。
 
 - [Bookmarks](https://marketplace.visualstudio.com/items?itemName=alefragnani.Bookmarks):
 
@@ -308,11 +256,9 @@ Visual Studio Code 已內建支援可以登入 GitHub 帳號來同步配置，�
 
   Tailwind CSS 的提示。
 
-- [MDX](https://marketplace.visualstudio.com/items?itemName=unifiedjs.vscode-mdx)
-
 - [Sass](https://marketplace.visualstudio.com/items?itemName=Syler.sass-indented)
 
-- [Prisma](https://marketplace.visualstudio.com/items?itemName=Prisma.prisma)
+  highlight `.sass` 檔案
 
 #### 維護程式碼品質
 
@@ -352,8 +298,6 @@ Visual Studio Code 已內建支援可以登入 GitHub 帳號來同步配置，�
 
   highlight `.env` 檔案。
 
-- [Polacode](https://marketplace.visualstudio.com/items?itemName=pnp.polacode)
-
 ### 自訂配置設定檔案
 
 - 自訂配置設定：[settings.json](https://github.com/twgd/my-devenv-setup/blob/master/vscode/settings.json)
@@ -371,8 +315,3 @@ Visual Studio Code 已內建支援可以登入 GitHub 帳號來同步配置，�
   "recommendations": ["{{projectID}}"]
 }
 ```
-
-## Others
-
-- 下載 Line
-- 下載 BeFocused

@@ -26,7 +26,7 @@
   "vim.easymotion": true,
   "vim.foldfix": true,
   "todo-tree.highlights.enabled": true,
-  "editor.fontFamily": "MesloLGS NF, 'Courier New', monospace",
+  "editor.fontFamily": "MesloLGS Nerd Font Mono, 'Courier New', monospace",
   "editor.fontSize": 17,
   "editor.lineHeight": 25,
   "editor.letterSpacing": 0.5,
@@ -139,5 +139,9 @@
   "editor.quickSuggestions": {
     "strings": "on"
   },
-  "tailwindCSS.experimental.classRegex": [["clsx\\(([^)]*)\\)", "(?:'|\"|`)([^']*)(?:'|\"|`)"]]
+  "tailwindCSS.experimental.classRegex": [["clsx\\(([^)]*)\\)", "(?:'|\"|`)([^']*)(?:'|\"|`)"]],
+  "claudeCode.preferredLocation": "panel",
+  "[jsonc]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  }
 }

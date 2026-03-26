@@ -1,0 +1,7 @@
+{
+  "enabledPlugins": {},
+  "statusLine": {
+    "type": "command",
+    "command": "sh /Users/shane/.claude/statusline-command.sh"
+  }
+}

@@ -1,8 +1,6 @@
 {
-  "enabledPlugins": {},
-  "statusLine": {
-    "type": "command",
-    "command": "sh /Users/shane/.claude/statusline-command.sh"
+  "env": {
+    "USE_BUILTIN_RIPGREP": "0"
   },
   "permissions": {
     "deny": [
@@ -13,5 +11,18 @@
       "Read(**/.env.production)",
       "Read(**/.env.test)"
     ]
+  },
+  "statusLine": {
+    "type": "command",
+    "command": "sh /Users/shane/.claude/statusline-command.sh"
+  },
+  "enabledPlugins": {},
+  "extraKnownMarketplaces": {
+    "vercel-vercel-plugin": {
+      "source": {
+        "source": "directory",
+        "path": "/Users/shane/.cache/plugins/github.com-vercel-vercel-plugin"
+      }
+    }
   }
 }

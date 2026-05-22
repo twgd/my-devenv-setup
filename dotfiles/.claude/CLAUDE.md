@@ -61,3 +61,10 @@
 - Commit working code incrementally
 - Update documentation as you make changes
 - Stop after 3 failed attempts and reassess the approach
+
+## After Every Task
+Before finishing, check if any of the following need updating:
+- `CLAUDE.md` — architecture, conventions, tool choices, or workflow changes
+- `README.md` — setup steps, usage, or project overview changes
+
+Only update if the task actually changed something relevant to those files.

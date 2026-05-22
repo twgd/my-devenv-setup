@@ -23,6 +23,16 @@
         "source": "directory",
         "path": "/Users/shane/.cache/plugins/github.com-vercel-vercel-plugin"
       }
+    },
+    "claude-plugins-official": {
+      "source": {
+        "source": "github",
+        "repo": "anthropics/claude-plugins-official"
+      }
     }
-  }
+  },
+  "effortLevel": "medium",
+  "tui": "default",
+  "skipDangerousModePermissionPrompt": true,
+  "verbose": true
 }

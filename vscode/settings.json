@@ -59,77 +59,200 @@
   "vim.normalModeKeyBindings": [],
   "vim.normalModeKeyBindingsNonRecursive": [
     {
-      "before": ["z", "h"],
-      "after": ["^"]
+      "before": [
+        "z",
+        "h"
+      ],
+      "after": [
+        "^"
+      ]
     },
     {
-      "before": ["z", "l"],
-      "after": ["$"]
+      "before": [
+        "z",
+        "l"
+      ],
+      "after": [
+        "$"
+      ]
     },
     {
-      "before": [" "],
-      "after": ["leader", "leader", "s"]
+      "before": [
+        " "
+      ],
+      "after": [
+        "leader",
+        "leader",
+        "s"
+      ]
     },
     {
-      "before": ["leader", " "],
-      "after": ["leader", "leader", "leader", "b", "d", "w"]
+      "before": [
+        "leader",
+        " "
+      ],
+      "after": [
+        "leader",
+        "leader",
+        "leader",
+        "b",
+        "d",
+        "w"
+      ]
     },
     {
-      "before": ["z", "c"],
-      "after": ["c", "i", "w"]
+      "before": [
+        "z",
+        "c"
+      ],
+      "after": [
+        "c",
+        "i",
+        "w"
+      ]
     },
     {
-      "before": ["`", "c"],
-      "after": ["c", "i", "`"]
+      "before": [
+        "`",
+        "c"
+      ],
+      "after": [
+        "c",
+        "i",
+        "`"
+      ]
     },
     {
-      "before": ["'", "c"],
-      "after": ["c", "i", "'"]
+      "before": [
+        "'",
+        "c"
+      ],
+      "after": [
+        "c",
+        "i",
+        "'"
+      ]
     },
     {
-      "before": ["\"", "c"],
-      "after": ["c", "i", "\""]
+      "before": [
+        "\"",
+        "c"
+      ],
+      "after": [
+        "c",
+        "i",
+        "\""
+      ]
     },
     {
-      "before": ["z", ")"],
-      "after": ["v", "i", ")"]
+      "before": [
+        "z",
+        ")"
+      ],
+      "after": [
+        "v",
+        "i",
+        ")"
+      ]
     },
     {
-      "before": ["z", "}"],
-      "after": ["v", "i", "}"]
+      "before": [
+        "z",
+        "}"
+      ],
+      "after": [
+        "v",
+        "i",
+        "}"
+      ]
     },
     {
-      "before": ["z", "`"],
-      "after": ["v", "i", "`"]
+      "before": [
+        "z",
+        "`"
+      ],
+      "after": [
+        "v",
+        "i",
+        "`"
+      ]
     },
     {
-      "before": ["z", "'"],
-      "after": ["v", "i", "'"]
+      "before": [
+        "z",
+        "'"
+      ],
+      "after": [
+        "v",
+        "i",
+        "'"
+      ]
     },
     {
-      "before": ["z", "\""],
-      "after": ["v", "i", "\""]
+      "before": [
+        "z",
+        "\""
+      ],
+      "after": [
+        "v",
+        "i",
+        "\""
+      ]
     },
     {
-      "before": ["z", ">"],
-      "after": ["v", "i", ">"]
+      "before": [
+        "z",
+        ">"
+      ],
+      "after": [
+        "v",
+        "i",
+        ">"
+      ]
     },
     {
-      "before": ["z", "t"],
-      "after": ["v", "i", "t"]
+      "before": [
+        "z",
+        "t"
+      ],
+      "after": [
+        "v",
+        "i",
+        "t"
+      ]
     },
     {
-      "before": [",", "p"],
-      "after": ["\"", "0", "p"]
+      "before": [
+        ",",
+        "p"
+      ],
+      "after": [
+        "\"",
+        "0",
+        "p"
+      ]
     }
   ],
   "vim.insertModeKeyBindings": [
     {
-      "before": ["j", "j"],
-      "after": ["<Esc>"]
+      "before": [
+        "j",
+        "j"
+      ],
+      "after": [
+        "<Esc>"
+      ]
     }
   ],
-  "cSpell.userWords": ["Chakra", "Hexo", "nextjs", "tailwindcss", "thetwgd", "TWGD", "Vercel"],
+  "cSpell.userWords": [
+    "Chakra",
+    "Hexo",
+    "nextjs",
+    "tailwindcss",
+    "thetwgd",
+    "TWGD",
+    "Vercel"
+  ],
   "git.autofetch": true,
   "workbench.colorTheme": "Cobalt2",
   "editor.bracketPairColorization.enabled": true,
@@ -139,9 +262,25 @@
   "editor.quickSuggestions": {
     "strings": "on"
   },
-  "tailwindCSS.experimental.classRegex": [["clsx\\(([^)]*)\\)", "(?:'|\"|`)([^']*)(?:'|\"|`)"]],
+  "tailwindCSS.experimental.classRegex": [
+    [
+      "clsx\\(([^)]*)\\)",
+      "(?:'|\"|`)([^']*)(?:'|\"|`)"
+    ]
+  ],
   "claudeCode.preferredLocation": "panel",
   "[jsonc]": {
     "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "conventionalCommits.showNewVersionNotes": false,
+  "claudeCode.useTerminal": true,
+  "gitlens.ai.model": "vscode",
+  "gitlens.ai.vscode.model": "copilot:gpt-4.1",
+  "github.copilot.enable": {
+    "*": false,
+    "plaintext": false,
+    "markdown": false,
+    "scminput": false,
+    "typescript": false
   }
 }

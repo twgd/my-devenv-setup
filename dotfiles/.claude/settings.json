@@ -12,9 +12,11 @@
       "Read(**/.env.test)"
     ]
   },
+  "model": "sonnet",
   "statusLine": {
     "type": "command",
-    "command": "sh /Users/shane/.claude/statusline-command.sh"
+    "command": "node /Users/shane/.npm/_npx/a2d93a0c361bc552/node_modules/ccxray/server/adapters/claude-adapter.js",
+    "_ccxrayDelegate": "sh /Users/shane/.claude/statusline-command.sh"
   },
   "enabledPlugins": {},
   "extraKnownMarketplaces": {
@@ -34,5 +36,8 @@
   "effortLevel": "medium",
   "tui": "default",
   "skipDangerousModePermissionPrompt": true,
-  "verbose": true
+  "verbose": true,
+  "inputNeededNotifEnabled": true,
+  "agentPushNotifEnabled": true,
+  "remoteControlAtStartup": true
 }

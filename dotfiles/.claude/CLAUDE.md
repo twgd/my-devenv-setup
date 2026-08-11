@@ -48,6 +48,9 @@
 - Use the same libraries/utilities that are already in the codebase
 - Maintain consistency with existing code style
 
+## Language
+- Record all project artifacts in English — documentation, commit messages, code comments, etc. — even when the conversation with the user is in another language.
+
 ## Important Reminders
 
 **NEVER**:

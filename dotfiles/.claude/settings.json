@@ -10,7 +10,8 @@
       "Read(**/.env.development)",
       "Read(**/.env.production)",
       "Read(**/.env.test)"
-    ]
+    ],
+    "defaultMode": "auto"
   },
   "model": "sonnet",
   "statusLine": {
@@ -36,8 +37,9 @@
   "effortLevel": "medium",
   "tui": "default",
   "skipDangerousModePermissionPrompt": true,
+  "editorMode": "normal",
   "verbose": true,
+  "remoteControlAtStartup": true,
   "inputNeededNotifEnabled": true,
-  "agentPushNotifEnabled": true,
-  "remoteControlAtStartup": true
+  "agentPushNotifEnabled": true
 }

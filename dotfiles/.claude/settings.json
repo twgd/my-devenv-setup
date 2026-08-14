@@ -16,8 +16,7 @@
   "model": "sonnet",
   "statusLine": {
     "type": "command",
-    "command": "node /Users/shane/.npm/_npx/a2d93a0c361bc552/node_modules/ccxray/server/adapters/claude-adapter.js",
-    "_ccxrayDelegate": "sh /Users/shane/.claude/statusline-command.sh"
+    "command": "sh /Users/shane/.claude/statusline-command.sh"
   },
   "enabledPlugins": {},
   "extraKnownMarketplaces": {

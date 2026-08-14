@@ -1,0 +1,20 @@
+// Zellij config tuned for running Claude Code over SSH from a phone.
+//
+// Why locked mode: Zellij normally claims Ctrl+p/n/t/o/s/h as mode switches,
+// which collides with TUI apps running inside it. Starting locked passes every
+// key straight through to Claude Code; press Ctrl+g to unlock when you actually
+// want to talk to Zellij, Ctrl+g again to lock back.
+default_mode "locked"
+
+// Phone screens have very few rows. Drop the pane borders and use the ASCII UI
+// so nothing is wasted on decoration and no glyphs break in mobile terminals.
+simplified_ui true
+pane_frames false
+
+default_shell "zsh"
+copy_command "pbcopy"
+
+// Keep scrollback across daemon restarts so an attach from the phone still has
+// the earlier conversation above the fold.
+session_serialization true
+scrollback_lines_to_serialize 10000

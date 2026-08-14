@@ -42,7 +42,9 @@ The Neovim config is a separate Git repo (`git@github.com:twgd/kickstart.nvim.gi
 |---|---|
 | Terminal | WezTerm |
 | Shell | Zsh + Oh-My-Zsh + Powerlevel10k |
-| Editor | Neovim (primary), VS Code (secondary) |
+| Editor | Zed (primary), Neovim (secondary), VS Code (retiring) |
+| Browser | Firefox, Chrome, Safari (macOS built-in) |
+| Dev agent | Claude Code + Codex CLI |
 | Node.js versions | nvm |
 | Package manager | Homebrew |
 | Dotfiles | GNU Stow |

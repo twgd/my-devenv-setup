@@ -1,3 +1,10 @@
+# OPENSPEC:START
+# OpenSpec shell completions configuration
+fpath=("/Users/shane/.oh-my-zsh/custom/completions" $fpath)
+autoload -Uz compinit
+compinit
+# OPENSPEC:END
+
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
@@ -129,3 +136,10 @@ export HOMEBREW_NO_ANALYTICS=1
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 export PATH="$HOME/.local/bin:$PATH"
+
+# zellij: attach to a persistent session, creating it if it does not exist.
+# Lets an SSH session from the phone pick up the same Claude Code process that
+# was left running on the desktop. Usage: zj [session-name]  (default: main)
+zj() {
+  zellij attach --create "${1:-main}"
+}

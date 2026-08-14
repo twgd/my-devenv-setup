@@ -274,13 +274,12 @@
   },
   "conventionalCommits.showNewVersionNotes": false,
   "claudeCode.useTerminal": true,
-  "gitlens.ai.model": "vscode",
-  "gitlens.ai.vscode.model": "copilot:gpt-4.1",
   "github.copilot.enable": {
     "*": false,
     "plaintext": false,
     "markdown": false,
     "scminput": false,
     "typescript": false
-  }
+  },
+  "workbench.startupEditor": "none"
 }

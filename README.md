@@ -15,11 +15,26 @@
 - [ ] Google 備份
 - [ ] Dropbox 備份
 - [ ] 本機的 repos 同步到 Github
-- [ ] 瀏覽器備份與同步
+- [ ] 預設瀏覽器備份與同步
 - [ ] dotfiles 備份到 [my-devenv-setup/dotfiles](https://github.com/twgd/my-devenv-setup/tree/master/dotfiles)
-- [ ] VScode 以 Github 帳號同步備份 (settings.json & keybindings.json 也另外備份到 [my-devenv-setup/vscode](https://github.com/twgd/my-devenv-setup/tree/master/vscode))
 - [ ] Raycast 匯出備份
 - [ ] Notion 備份：使用 [notion-backup](https://github.com/darobin/notion-backup) 及 Github Actions 自動化批次備份（每天一次）
+
+P.S. Notion備份與換機無關，只是要確保資料本地化
+
+## Key Tool Choices
+
+| Purpose          | Tool                                                  |
+| ---------------- | ----------------------------------------------------- |
+| Terminal         | WezTerm                                               |
+| Shell            | Zsh + Oh-My-Zsh + Powerlevel10k                       |
+| Editor           | Zed (primary), Neovim (secondary), VS Code (retiring) |
+| Browser          | Firefox, Chrome, Safari (macOS built-in)              |
+| Dev agent        | Claude Code + Codex CLI                               |
+| Node.js versions | nvm                                                   |
+| Package manager  | Homebrew                                              |
+| Dotfiles         | GNU Stow                                              |
+| Font             | MesloLGS Nerd Font Mono                               |
 
 ## macOS Settings
 
@@ -77,35 +92,37 @@ brew install \
 
 ```shell
 brew install --cask \
-  brave-browser \
   claude-code \
-  discord \
+  codex \
+  raycast \
+  wezterm \
+  zed \
+  tailscale \
   dropbox \
   git-credential-manager \
   google-chrome \
-  microsoft-edge \
-  raycast \
-  wezterm \
-  arc \
   firefox \
-  iterm2 \
   rescuetime \
+  discord \
   telegram \
-  visual-studio-code \
 ```
 
 ## Browser Setup
 
-1. Arc 設為預設瀏覽器
+主要使用 Firefox、Chrome、Safari (macOS 內建)
+
+1. 依偏好設定其中一個為預設瀏覽器
 2. 同步 bookmarks & tabs & extensions
 3. 登入 Google & GitHub
 4. 偏好設定：dark mode
+5. 開啟縱向分頁 (vertical tabs)：這是目前瀏覽器最主要仰賴的功能
 
 - Extensions
   - React dev tools
   - Vimium
   - Wappalyzer - Technology profiler
-  - HTML5 Outliner
+  - HeadingsMap
+  - uBlock
 
 ## DotFiles Setup
 
@@ -162,6 +179,16 @@ P.S. `./vscode/` 資料夾內的配置設定檔案，因為路徑不在 `~/` 資
 
 ---
 
+## Remote Access Setup
+
+目前有三條從手機接手 Mac 上 agent session 的架構：
+
+- **Tailscale + SSH + zellij + Termius**：傳統 SSH 連法，session 跑在 Mac 上的 zellij 裡，可承受斷線、手機休眠、切換裝置。不限 Claude Code，任何跑在終端機裡的程式都適用。流程與換機所需的一次性設定見 [docs/remote-access.md](docs/remote-access.md)
+- **Claude Code 內建的 remote control**
+- **Codex CLI 搭配 ChatGPT 手機版**：ChatGPT App 本身提供介面輸入 SSH 連線所需的 host、username、私鑰等資訊來連線
+
+---
+
 ## Dev Environments Setup
 
 1. 確認 Git 已下載，並確認 global config 檔案也配置完畢
@@ -175,9 +202,28 @@ P.S. `./vscode/` 資料夾內的配置設定檔案，因為路徑不在 `~/` 資
 
 4. 設置 Github SSH key，以 SSH 與 Github 連線：參考 [Connecting to GitHub with SSH](https://docs.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh) 來設置
 
-## Neovim Setup
+## Dev Agent
 
-目前使用 Neovim 搭配 Claude Code 開發。
+目前 Claude Code 與 Codex CLI 並用。
+
+## Editor Setup
+
+目前編輯器優先順序：**Zed (主力) > Neovim (次要) > VS Code (退場中)**。
+
+- **Zed**：開箱即用看 code、內建 Project Diff、與外部 CLI agent（Codex CLI、Claude Code）協作時檔案同步流暢、維護成本低，設為主力編輯器。
+- **Neovim**：適合當終端機工作台，鍵盤操作與資源消耗表現最佳，但要舒服地看 Git diff需要搭配 `lazygit`（工作樹、逐 hunk staging、commit graph）等工具，維護成本中高，故列為次要編輯器。
+- **VS Code**：逐步退場，設定保留於下方作為歷史參考。
+
+實際搭配習慣：
+
+```text
+zellij
+├── pane 1：Codex CLI / Claude Code
+├── pane 2：Neovim
+└── pane 3：lazygit
+```
+
+## Neovim Setup
 
 1. 確認已下載 neovim
 
@@ -187,7 +233,10 @@ P.S. `./vscode/` 資料夾內的配置設定檔案，因為路徑不在 `~/` 資
 
 ## Visual Studio Code
 
-Visual Studio Code 是我使用的主要編輯器之一，好好打造編輯器的環境配置有助於提升開發效率。
+VS Code 目前退場中，主力編輯器已轉為 Zed。
+
+以下內容為過去的配置紀錄，保留作為參考。
+
 這裡整理了一些我安裝的 Extensions、偏好設定、常用的 Shortcuts，
 若未來需要重新配置環境的時候，可以作為參考依據，另外也方便與他人分享。
 

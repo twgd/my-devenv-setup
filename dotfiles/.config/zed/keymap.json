@@ -1,0 +1,41 @@
+// Zed keymap — ported from vscode/keybindings.json and the
+// vim.normalModeKeyBindingsNonRecursive / vim.insertModeKeyBindings
+// blocks in vscode/settings.json.
+//
+// Zed's vim mode has no direct equivalent to VS Code's "before/after"
+// remap syntax, so multi-key remaps are ported via vim::SendKeystrokes,
+// which replays a literal keystroke string as if you'd typed it in
+// normal/visual mode.
+[
+  {
+    "context": "Workspace",
+    "bindings": {
+      "shift-cmd-a": "git::Push"
+    }
+  },
+  {
+    "context": "vim_mode == normal && !menu",
+    "bindings": {
+      "z h": ["vim::SendKeystrokes", "^"],
+      "z l": ["vim::SendKeystrokes", "$"],
+      "z c": ["vim::SendKeystrokes", "ciw"],
+      "` c": ["vim::SendKeystrokes", "ci`"],
+      "' c": ["vim::SendKeystrokes", "ci'"],
+      "\" c": ["vim::SendKeystrokes", "ci\""],
+      "z )": ["vim::SendKeystrokes", "vi)"],
+      "z }": ["vim::SendKeystrokes", "vi}"],
+      "z `": ["vim::SendKeystrokes", "vi`"],
+      "z '": ["vim::SendKeystrokes", "vi'"],
+      "z \"": ["vim::SendKeystrokes", "vi\""],
+      "z >": ["vim::SendKeystrokes", "vi>"],
+      "z t": ["vim::SendKeystrokes", "vit"],
+      ", p": ["vim::SendKeystrokes", "\"0p"]
+    }
+  },
+  {
+    "context": "vim_mode == insert",
+    "bindings": {
+      "j j": "vim::NormalBefore"
+    }
+  }
+]

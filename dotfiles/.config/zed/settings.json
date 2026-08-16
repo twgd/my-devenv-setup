@@ -1,0 +1,83 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run `zed: open default settings` from the
+// command palette (cmd-shift-p / ctrl-shift-p)
+{
+  "base_keymap": "VSCode",
+  "relative_line_numbers": "enabled",
+  "gutter": {
+    "line_numbers": true
+  },
+  "minimap": {
+    "show": "always"
+  },
+  "cursor_shape": "bar",
+  "cursor_blink": false,
+  "autosave": "on_focus_change",
+  "buffer_font_fallbacks": [
+    "Courier New",
+    "monospace"
+  ],
+  "buffer_font_family": "MesloLGS Nerd Font Mono",
+  "file_types": {
+    "tailwindcss": [
+      "*.css"
+    ]
+  },
+  "colorize_brackets": true,
+  "linked_edits": true,
+  "show_whitespaces": "all",
+  "show_edit_predictions": true,
+  "format_on_save": "on",
+  "tab_size": 2,
+  "telemetry": {
+    "diagnostics": false,
+    "metrics": false,
+    "anthropic_retention": false
+  },
+  "vim_mode": true,
+  "icon_theme": "Zed (Default)",
+  "ui_font_size": 16,
+  "buffer_font_size": 17.0,
+  "theme": {
+    "mode": "system",
+    "light": "Ayu Light",
+    "dark": "Ayu Dark"
+  },
+  "prettier": {
+    "allowed": true
+  },
+  "languages": {
+    "JavaScript": {
+      "formatter": "prettier",
+      "tab_size": 2
+    },
+    "TypeScript": {
+      "formatter": "prettier",
+      "tab_size": 2
+    },
+    "TSX": {
+      "formatter": "prettier",
+      "tab_size": 2
+    },
+    "JSON": {
+      "formatter": "prettier"
+    },
+    "JSONC": {
+      "formatter": "prettier"
+    },
+    "CSS": {
+      "formatter": "prettier"
+    },
+    "HTML": {
+      "formatter": "prettier"
+    },
+    "Markdown": {
+      "formatter": "prettier"
+    }
+  }
+}

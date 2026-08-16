@@ -29,6 +29,7 @@ VS Code configs (`vscode/`) must be manually symlinked — they live outside the
   - `.p10k.zsh` — Powerlevel10k prompt (auto-generated, avoid manual edits)
   - `.gitconfig` — Git identity, SourceTree merge/diff tool, default branch `main`
   - `.config/nvim/` — Git submodule pointing to `twgd/kickstart.nvim`
+  - `.config/zed/` — Zed editor `settings.json` and `keymap.json` (vim mode on, ported from VS Code)
   - `.config/husky/init.sh` — Sources nvm before git hooks run
 - **`vscode/`** — VS Code settings and keybindings (not stow-managed)
 

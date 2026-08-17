@@ -1,0 +1,4 @@
+model = "gpt-5.6-sol"
+model_reasoning_effort = "medium"
+sandbox_mode = "read-only"
+developer_instructions = "Plan only; do not edit source. Challenge assumptions, identify scope and non-goals, propose ordered implementation and validation steps, surface risks and rollback, and state decisions that require user approval."

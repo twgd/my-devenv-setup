@@ -31,7 +31,16 @@ VS Code configs (`vscode/`) must be manually symlinked — they live outside the
   - `.config/nvim/` — Git submodule pointing to `twgd/kickstart.nvim`
   - `.config/zed/` — Zed editor `settings.json` and `keymap.json` (vim mode on, ported from VS Code)
   - `.config/husky/init.sh` — Sources nvm before git hooks run
+  - `.claude/` — Claude Code global `CLAUDE.md` and `settings.json`
+  - `.codex/` — Codex CLI setup: `config.toml` (plus `daily`/`autonomous` profile overrides), global `AGENTS.md`, `agents/*.toml` subagent roles
 - **`vscode/`** — VS Code settings and keybindings (not stow-managed)
+- **`docs/`** — Longer-form notes (remote access)
+
+## Agent Configs
+
+Claude Code and Codex CLI run side by side; neither is being retired. Shared workflow rules live in `dotfiles/.codex/AGENTS.md`, and Codex reads `CLAUDE.md` as a fallback project doc (`project_doc_fallback_filenames`), so keep the two from contradicting each other.
+
+`dotfiles/.codex/config.toml` contains machine-specific absolute paths in the `[projects."..."]` trust entries (Codex does not expand `~` there). Update them when the home path changes. Config files are committed as-is; there are no `.example` templates. Notifications use `[tui].notifications` only — no external `notify` hook.
 
 ## Neovim Config
 

@@ -204,7 +204,16 @@ P.S. `./vscode/` 資料夾內的配置設定檔案，因為路徑不在 `~/` 資
 
 ## Dev Agent
 
-目前 Claude Code 與 Codex CLI 並用。
+目前 Claude Code 與 Codex CLI 並用，兩套設定都納入 Stow 管理：
+
+- **Claude Code**：`dotfiles/.claude/`（全域 `CLAUDE.md`、`settings.json`）
+- **Codex CLI**：`dotfiles/.codex/`
+  - `config.toml`：模型、權限 profile（`daily` / `autonomous`）、subagent 上限、TUI 狀態列與通知
+  - `daily.config.toml`、`autonomous.config.toml`：兩個 profile 的覆寫檔
+  - `AGENTS.md`：全域 agent 工作規範（等同 Codex 版的 `CLAUDE.md`）
+  - `agents/*.toml`：explorer、planner、worker、tester、reviewer、browser-verifier 六個 subagent 角色
+
+`config.toml` 的 `[projects."..."]` 是機器相依的絕對路徑，換機時要一併更新。
 
 ## Editor Setup
 

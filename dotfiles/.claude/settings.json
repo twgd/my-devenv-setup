@@ -13,6 +13,9 @@
     ],
     "defaultMode": "auto"
   },
+  "skillOverrides": {
+    "web-design-guidelines": "off"
+  },
   "model": "sonnet",
   "statusLine": {
     "type": "command",

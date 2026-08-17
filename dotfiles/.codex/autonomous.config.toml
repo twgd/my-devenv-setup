@@ -1,0 +1,9 @@
+# Stowed to ~/.codex/autonomous.config.toml. Run only in a trusted, non-main repo:
+# codex --profile autonomous
+model = "gpt-5.6-luna"
+model_reasoning_effort = "max"
+plan_mode_reasoning_effort = "high"
+approval_policy = "on-request"
+approvals_reviewer = "auto_review"
+default_permissions = "autonomous"
+web_search = "live"

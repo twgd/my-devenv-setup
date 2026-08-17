@@ -1,0 +1,84 @@
+# Stowed to ~/.codex/config.toml. The [projects."..."] keys need absolute paths;
+# update them when the home path changes.
+model = "gpt-5.6-luna"
+model_reasoning_effort = "xhigh"
+plan_mode_reasoning_effort = "high"
+model_verbosity = "low"
+personality = "pragmatic"
+approval_policy = "on-request"
+approvals_reviewer = "user"
+default_permissions = "daily"
+web_search = "cached"
+project_doc_fallback_filenames = ["CLAUDE.md"]
+project_doc_max_bytes = 32768
+
+[shell_environment_policy]
+inherit = "core"
+ignore_default_excludes = false
+
+[projects."/Users/shane/projects"]
+trust_level = "trusted"
+
+[projects."/Users/shane/projects/my-devenv-setup"]
+trust_level = "trusted"
+
+[agents]
+enabled = true
+max_concurrent_threads_per_session = 4
+default_subagent_model = "gpt-5.6-luna"
+default_subagent_reasoning_effort = "xhigh"
+interrupt_message = true
+
+[agents.browser-verifier]
+config_file = "agents/browser-verifier.toml"
+description = "Browser acceptance tester for real UI flows after implementation."
+
+[agents.explorer]
+config_file = "agents/explorer.toml"
+description = "Read-only repository explorer for locating code, tracing behavior, and mapping architecture before planning or implementation."
+
+[agents.planner]
+config_file = "agents/planner.toml"
+description = "High-level planner and architect for non-trivial features, refactors, and difficult bug fixes."
+
+[agents.reviewer]
+config_file = "agents/reviewer.toml"
+description = "Independent final reviewer for correctness, regressions, security, data loss, and missing tests."
+
+[agents.tester]
+config_file = "agents/tester.toml"
+description = "Validation agent for tests, formatter, lint, typecheck, build, and regression analysis."
+
+[agents.worker]
+config_file = "agents/worker.toml"
+description = "Default implementation agent for approved, well-scoped coding tasks."
+
+[permissions.daily]
+description = "Daily development: workspace edits, no network, no real environment files."
+extends = ":workspace"
+
+[permissions.daily.filesystem.":workspace_roots"]
+"**/.env" = "deny"
+"**/.env.local" = "deny"
+"**/.env.*.local" = "deny"
+
+[permissions.daily.network]
+enabled = false
+
+[permissions.autonomous]
+description = "Trusted repositories: workspace edits and public network, with secrets denied."
+extends = "daily"
+
+[permissions.autonomous.network]
+enabled = true
+
+[permissions.autonomous.network.domains]
+"*" = "allow"
+
+[tui]
+notifications = ["agent-turn-complete", "approval-requested"]
+notification_method = "auto"
+notification_condition = "unfocused"
+vim_mode_default = false
+status_line = ["model-with-reasoning", "git-branch", "branch-changes", "permissions", "context-used", "weekly-limit"]
+status_line_use_colors = true

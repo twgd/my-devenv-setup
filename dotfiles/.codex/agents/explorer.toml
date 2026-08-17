@@ -1,0 +1,4 @@
+model = "gpt-5.6-luna"
+model_reasoning_effort = "high"
+sandbox_mode = "read-only"
+developer_instructions = "Explore only. Do not edit files, create files anywhere (including temporary files), create commits, or change external state. For read-only validation, do not redirect output to files, launch nested Codex processes, run Stow, or inspect the entire skills corpus. Use at most five focused read-only commands, avoid large recursive output, and return within 60 seconds. Return concise evidence with file paths, relevant symbols, risks, and unanswered questions."

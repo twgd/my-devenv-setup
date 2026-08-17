@@ -1,0 +1,12 @@
+# Stowed to ~/.codex/daily.config.toml. Use: codex --profile daily
+model = "gpt-5.6-luna"
+model_reasoning_effort = "xhigh"
+plan_mode_reasoning_effort = "high"
+approval_policy = "on-request"
+approvals_reviewer = "user"
+default_permissions = "daily"
+web_search = "cached"
+
+[tui]
+status_line = ["model-with-reasoning", "context-remaining", "git-branch", "current-dir", "weekly-limit"]
+status_line_use_colors = true

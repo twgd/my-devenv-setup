@@ -8,34 +8,33 @@
 // normal/visual mode.
 [
   {
-    "context": "Workspace",
-    "bindings": {
-      "shift-cmd-a": "git::Push"
-    }
-  },
-  {
-    "context": "vim_mode == normal && !menu",
-    "bindings": {
-      "z h": ["vim::SendKeystrokes", "^"],
-      "z l": ["vim::SendKeystrokes", "$"],
-      "z c": ["vim::SendKeystrokes", "ciw"],
-      "` c": ["vim::SendKeystrokes", "ci`"],
-      "' c": ["vim::SendKeystrokes", "ci'"],
-      "\" c": ["vim::SendKeystrokes", "ci\""],
-      "z )": ["vim::SendKeystrokes", "vi)"],
-      "z }": ["vim::SendKeystrokes", "vi}"],
-      "z `": ["vim::SendKeystrokes", "vi`"],
-      "z '": ["vim::SendKeystrokes", "vi'"],
-      "z \"": ["vim::SendKeystrokes", "vi\""],
-      "z >": ["vim::SendKeystrokes", "vi>"],
-      "z t": ["vim::SendKeystrokes", "vit"],
-      ", p": ["vim::SendKeystrokes", "\"0p"]
-    }
-  },
-  {
     "context": "vim_mode == insert",
     "bindings": {
-      "j j": "vim::NormalBefore"
-    }
-  }
+      "j j": "vim::NormalBefore",
+    },
+  },
+  {
+    "context": "AcpThread",
+    "unbind": {
+      "cmd-shift-g": "agent::SelectPreviousThreadMatch",
+    },
+  },
+  {
+    "context": "Pane",
+    "unbind": {
+      "cmd-shift-g": "search::SelectPreviousMatch",
+    },
+  },
+  {
+    "context": "Workspace",
+    "bindings": {
+      "cmd-shift-g": "git_panel::ToggleFocus",
+    },
+  },
+  {
+    "context": "Workspace",
+    "unbind": {
+      "ctrl-shift-g": "git_panel::ToggleFocus",
+    },
+  },
 ]

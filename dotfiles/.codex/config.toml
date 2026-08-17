@@ -61,6 +61,9 @@ extends = ":workspace"
 "**/.env" = "deny"
 "**/.env.local" = "deny"
 "**/.env.*.local" = "deny"
+"**/.env.development" = "deny"
+"**/.env.production" = "deny"
+"**/.env.test" = "deny"
 
 [permissions.daily.network]
 enabled = false

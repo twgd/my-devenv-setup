@@ -42,7 +42,12 @@
     "dock": "left",
   },
   "agent": {
-    "button": false,
+    "default_model": {
+      "provider": "openai-subscribed",
+      "model": "gpt-5.6-luna",
+      "enable_thinking": true,
+      "effort": "max"
+    },
     "dock": "right",
     "sidebar_side": "right",
     "favorite_models": [],

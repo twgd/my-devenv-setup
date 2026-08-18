@@ -32,7 +32,6 @@
     "dock": "left",
   },
   "terminal": {
-    "font_size": 14.0,
     "dock": "bottom",
   },
   "git": {

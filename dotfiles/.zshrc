@@ -28,7 +28,6 @@ POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir dir_writable vcs vi_mode)
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status)
 POWERLEVEL9K_MODE='nerdfont-complete'
 
-
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
 # a theme from this variable instead of looking in ~/.oh-my-zsh/themes/
@@ -117,6 +116,14 @@ export LANG=en_US.UTF-8
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+alias zj='zellij'
+alias cc='claude --permission-mode bypassPermissions'
+alias cx='codex --yolo'
+# zellij: attach to a persistent session, creating it if it does not exist.
+# Usage: zj [session-name]  (default: main)
+zja() {
+  zellij attach --create "${1:-main}"
+}
 
 export PATH="/usr/local/mysql/bin:$PATH"
 
@@ -136,9 +143,14 @@ export HOMEBREW_NO_ANALYTICS=1
 
 export PATH="$HOME/.local/bin:$PATH"
 
-# zellij: attach to a persistent session, creating it if it does not exist.
-# Lets an SSH session from the phone pick up the same Claude Code process that
-# was left running on the desktop. Usage: zj [session-name]  (default: main)
-zj() {
-  zellij attach --create "${1:-main}"
+# agentflow setup
+export AGF_OPEN="zed"
+agf() {
+  local dir
+  dir=$(node "$HOME/.agents/skills/agentflow/scripts/agf.js" "$@") || return 1
+  [ -n "$dir" ] && cd "$dir"
+  return 0
+}
+agf-looper() {
+  node "$HOME/.agents/skills/agentflow/scripts/looper.js" "$@"
 }

@@ -143,6 +143,7 @@
     },
     "Markdown": {
       "formatter": "prettier",
+      "format_on_save": "off",
     },
   },
 }

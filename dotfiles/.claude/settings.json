@@ -13,10 +13,10 @@
     ],
     "defaultMode": "auto"
   },
+  "model": "opus",
   "skillOverrides": {
     "web-design-guidelines": "off"
   },
-  "model": "sonnet",
   "statusLine": {
     "type": "command",
     "command": "sh /Users/shane/.claude/statusline-command.sh"
@@ -37,6 +37,14 @@
     }
   },
   "effortLevel": "medium",
+  "modelSettings": {
+    "claude-opus-4-6": {
+      "effortLevel": "high"
+    },
+    "claude-opus-5-5": {
+      "effortLevel": "high"
+    }
+  },
   "tui": "default",
   "skipDangerousModePermissionPrompt": true,
   "editorMode": "normal",

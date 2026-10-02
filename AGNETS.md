@@ -1,5 +1,3 @@
-# CLAUDE.md
-
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
 ## What This Repo Is
@@ -25,20 +23,20 @@ VS Code configs (`vscode/`) must be manually symlinked — they live outside the
 
 - **`dotfiles/`** — GNU Stow package; everything here maps to `~/` when stowed
   - `.zshrc` — Zsh config with Oh-My-Zsh, Powerlevel10k, nvm
-  - `.wezterm.lua` — WezTerm terminal with custom "coolnight" color scheme
+  - `.wezterm.lua` — WezTerm terminal with the Catppuccin Mocha color scheme
   - `.p10k.zsh` — Powerlevel10k prompt (auto-generated, avoid manual edits)
   - `.gitconfig` — Git identity, SourceTree merge/diff tool, default branch `main`
   - `.config/nvim/` — Git submodule pointing to `twgd/kickstart.nvim`
   - `.config/zed/` — Zed editor `settings.json` and `keymap.json` (vim mode on, ported from VS Code)
   - `.config/husky/init.sh` — Sources nvm before git hooks run
-  - `.claude/` — Claude Code global `CLAUDE.md` and `settings.json`
-  - `.codex/` — Codex CLI setup: `config.toml` (plus `daily`/`autonomous` profile overrides), global `AGENTS.md`, `agents/*.toml` subagent roles
+  - `.claude/` — Claude Code global `AGENTS.md` (symlink → `.codex/AGENTS.md`) and `settings.json`
+  - `.codex/` — Codex CLI setup: `config.toml` and global `AGENTS.md`
 - **`vscode/`** — VS Code settings and keybindings (not stow-managed)
 - **`docs/`** — Longer-form notes (remote access)
 
 ## Agent Configs
 
-Claude Code and Codex CLI run side by side; neither is being retired. Shared workflow rules live in `dotfiles/.codex/AGENTS.md`, and Codex reads `CLAUDE.md` as a fallback project doc (`project_doc_fallback_filenames`), so keep the two from contradicting each other.
+Claude Code and Codex CLI run side by side; neither is being retired. Shared workflow rules have one source of truth: `dotfiles/.codex/AGENTS.md`. `dotfiles/.claude/AGENTS.md` is a symlink to that file. Codex also reads this repository's root `CLAUDE.md` as a fallback project doc (`project_doc_fallback_filenames`); that file is intentionally project-specific.
 
 `dotfiles/.codex/config.toml` contains machine-specific absolute paths in the `[projects."..."]` trust entries (Codex does not expand `~` there). Update them when the home path changes. Config files are committed as-is; there are no `.example` templates. Notifications use `[tui].notifications` only — no external `notify` hook.
 

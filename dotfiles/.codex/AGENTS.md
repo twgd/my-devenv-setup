@@ -15,13 +15,14 @@
 - The canonical source for shared agent instructions is `dotfiles/.codex/AGENTS.md` in `my-devenv-setup`; edit that file only. `~/.codex/AGENTS.md` links to it.
 - Verify Claude Code's instruction entry point before claiming it shares this file.
 
-## Git Remotes and Transport
+## User Configuration and Authorization
 
-- Preserve the repository's existing remote names, URLs, and fetch/push transport. An SSH remote must continue to use SSH.
-- Change remote configuration or transport only when the user explicitly authorizes that specific change. Authorization to develop, commit, push, verify CI, or repair a failing check does not authorize these changes.
-- This boundary includes adding workaround remotes (such as `github-https`), changing fetch/push URLs, and applying `url.*.insteadOf` or `url.*.pushInsteadOf` rewrites. It applies to persistent configuration at any scope and temporary overrides through `git -c`, environment variables, scripts, or hooks.
-- If authentication or remote verification fails, diagnose with read-only checks using the existing transport, report the failure and proposed remedy, and request authorization before any remote or transport change. Continue independent authorized work; leave checks that require the unavailable connection explicitly blocked.
-- After an authorized change, verify both stored configuration and effective fetch/push URLs and transport, including applicable URL rewrites. Report any remaining overrides; an unchanged stored `origin.url` alone does not prove that transport is unchanged.
+- Preserve the user's existing settings at every scope: system, account, application, agent, development environment, and project. Adding, modifying, deleting, or overriding settings requires explicit user authorization for that specific change.
+- When a task requires a configuration change outside the scope already explicitly authorized, first report why it is needed, the exact settings and scope affected, the proposed change, and its expected effects. Wait for the user's approval before executing the change. An explicit request to make a specific configuration change authorizes that change; it does not authorize unrelated adjustments.
+- Authorization to develop, debug, commit, push, verify CI, or repair a failing check does not by itself authorize configuration changes. Tool or workflow defaults, authentication failures, and convenience do not supply authorization either.
+- This boundary covers persistent settings and temporary overrides through command-line flags, environment variables, scripts, hooks, or alternate profiles. Reversibility or restoring the original settings afterward does not remove the approval requirement. Ordinary source-code edits within the authorized task remain permitted; a configuration change still requires authorization even when stored in source code.
+- For Git, preserve existing remote names, fetch/push URLs, and transport. This includes adding workaround remotes such as `github-https`, switching SSH to HTTPS, and applying `url.*.insteadOf` or `url.*.pushInsteadOf` rewrites, including temporary `git -c` overrides.
+- If existing settings prevent progress, diagnose with read-only checks, report the blocker and proposed remedy, and continue independent authorized work while awaiting approval. After an authorized change, verify both stored settings and effective behavior, and report the changes and any remaining overrides. An unchanged configuration file or stored `origin.url` alone does not prove that effective behavior is unchanged.
 
 ## Important Reminders
 

@@ -15,6 +15,14 @@
 - The canonical source for shared agent instructions is `dotfiles/.codex/AGENTS.md` in `my-devenv-setup`; edit that file only. `~/.codex/AGENTS.md` links to it.
 - Verify Claude Code's instruction entry point before claiming it shares this file.
 
+## Git Remotes and Transport
+
+- Preserve the repository's existing remote names, URLs, and fetch/push transport. An SSH remote must continue to use SSH.
+- Change remote configuration or transport only when the user explicitly authorizes that specific change. Authorization to develop, commit, push, verify CI, or repair a failing check does not authorize these changes.
+- This boundary includes adding workaround remotes (such as `github-https`), changing fetch/push URLs, and applying `url.*.insteadOf` or `url.*.pushInsteadOf` rewrites. It applies to persistent configuration at any scope and temporary overrides through `git -c`, environment variables, scripts, or hooks.
+- If authentication or remote verification fails, diagnose with read-only checks using the existing transport, report the failure and proposed remedy, and request authorization before any remote or transport change. Continue independent authorized work; leave checks that require the unavailable connection explicitly blocked.
+- After an authorized change, verify both stored configuration and effective fetch/push URLs and transport, including applicable URL rewrites. Report any remaining overrides; an unchanged stored `origin.url` alone does not prove that transport is unchanged.
+
 ## Important Reminders
 
 **NEVER**:

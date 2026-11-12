@@ -12,10 +12,6 @@ web_search = "cached"
 project_doc_fallback_filenames = ["CLAUDE.md"]
 project_doc_max_bytes = 32768
 
-[shell_environment_policy]
-inherit = "core"
-ignore_default_excludes = false
-
 [projects."/Users/shane/projects"]
 trust_level = "trusted"
 
